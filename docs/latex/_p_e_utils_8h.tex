@@ -1,0 +1,225 @@
+\hypertarget{_p_e_utils_8h}{}\section{P\+E\+Utils/\+P\+E\+Utils.h File Reference}
+\label{_p_e_utils_8h}\index{P\+E\+Utils/\+P\+E\+Utils.\+h@{P\+E\+Utils/\+P\+E\+Utils.\+h}}
+
+
+Utility functions to browse a PE in memory.  
+
+
+{\ttfamily \#include \char`\"{}stdafx.\+h\char`\"{}}\newline
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct___s_e_c_t_i_o_n___e_n_t_r_y}{\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+E\+N\+T\+RY}}
+\begin{DoxyCompactList}\small\item\em each sections found in PE Header is represented by this structure Section\+Data points to section in memory Section\+Limit points to the section end in memory \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct___e_x_p_o_r_t___e_n_t_r_y}{\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+E\+N\+T\+RY}}
+\item 
+struct \mbox{\hyperlink{struct___i_m_p_o_r_t___e_n_t_r_y}{\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+E\+N\+T\+RY}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_p_e_utils_8h_ab25828807010c5c77b42ee0e898d8598}{D\+U\+M\+P\+\_\+\+F\+I\+E\+LD}}(Field\+Name,  Struct)~printf(\char`\"{}\%s\+: \%x\textbackslash{}n\char`\"{},\#Field\+Name,Struct-\/$>$Field\+Name)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct___s_e_c_t_i_o_n___e_n_t_r_y}{\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+E\+N\+T\+RY}} \mbox{\hyperlink{_p_e_utils_8h_aad187ca410c79891da72d502fb243ca8}{S\+E\+C\+T\+I\+O\+N\+\_\+\+E\+N\+T\+RY}}
+\begin{DoxyCompactList}\small\item\em each sections found in PE Header is represented by this structure Section\+Data points to section in memory Section\+Limit points to the section end in memory \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{struct___s_e_c_t_i_o_n___e_n_t_r_y}{\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+E\+N\+T\+RY}} $\ast$ \mbox{\hyperlink{_p_e_utils_8h_a07a72e52209060e126dc0bb25e396cbe}{P\+S\+E\+C\+T\+I\+O\+N\+\_\+\+E\+N\+T\+RY}}
+\item 
+typedef struct \mbox{\hyperlink{struct___e_x_p_o_r_t___e_n_t_r_y}{\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+E\+N\+T\+RY}} \mbox{\hyperlink{_p_e_utils_8h_a8fd5bbb56a4a0b58b194b88fb186b318}{E\+X\+P\+O\+R\+T\+\_\+\+E\+N\+T\+RY}}
+\item 
+typedef struct \mbox{\hyperlink{struct___e_x_p_o_r_t___e_n_t_r_y}{\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+E\+N\+T\+RY}} $\ast$ \mbox{\hyperlink{_p_e_utils_8h_a30d5b1b38cae0b6c0a3d5a0730fe4c29}{P\+E\+X\+P\+O\+R\+T\+\_\+\+E\+N\+T\+RY}}
+\item 
+typedef struct \mbox{\hyperlink{struct___i_m_p_o_r_t___e_n_t_r_y}{\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+E\+N\+T\+RY}} \mbox{\hyperlink{_p_e_utils_8h_aba6ab9438b967fb111a9b6d2b6bf2957}{I\+M\+P\+O\+R\+T\+\_\+\+E\+N\+T\+RY}}
+\item 
+typedef struct \mbox{\hyperlink{struct___i_m_p_o_r_t___e_n_t_r_y}{\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+E\+N\+T\+RY}} $\ast$ \mbox{\hyperlink{_p_e_utils_8h_a3eda83cfc187f4e138a00c02429fa874}{P\+I\+M\+P\+O\+R\+T\+\_\+\+E\+N\+T\+RY}}
+\item 
+typedef B\+O\+OL($\ast$ \mbox{\hyperlink{_p_e_utils_8h_a9dfb32456dddea6e1b4e69b7f8eee547}{Enum\+Sections\+Callback}}) (\mbox{\hyperlink{_p_e_utils_8h_a07a72e52209060e126dc0bb25e396cbe}{P\+S\+E\+C\+T\+I\+O\+N\+\_\+\+E\+N\+T\+RY}} lp\+Section\+Entry, L\+P\+V\+O\+ID User\+Args)
+\item 
+typedef B\+O\+OL($\ast$ \mbox{\hyperlink{_p_e_utils_8h_a186458d8ce041d138151d0ec7532d0fa}{Enum\+Exports\+Callback}}) (\mbox{\hyperlink{_p_e_utils_8h_a30d5b1b38cae0b6c0a3d5a0730fe4c29}{P\+E\+X\+P\+O\+R\+T\+\_\+\+E\+N\+T\+RY}} lp\+Export\+Entry, L\+P\+V\+O\+ID User\+Args)
+\item 
+typedef B\+O\+OL($\ast$ \mbox{\hyperlink{_p_e_utils_8h_a9cdff5c5e86fad1599948d3a1b5d4d31}{Enum\+Imports\+Callback}}) (\mbox{\hyperlink{_p_e_utils_8h_a3eda83cfc187f4e138a00c02429fa874}{P\+I\+M\+P\+O\+R\+T\+\_\+\+E\+N\+T\+RY}} lp\+Import\+Entry, L\+P\+V\+O\+ID User\+Args)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+P\+I\+M\+A\+G\+E\+\_\+\+N\+T\+\_\+\+H\+E\+A\+D\+E\+R\+S32 \mbox{\hyperlink{_p_e_utils_8h_aeccf9e19618fff5f1367c2da514c6c32}{P\+E32\+\_\+\+Get\+Nt\+Headers}} (H\+M\+O\+D\+U\+LE h\+Mod)
+\begin{DoxyCompactList}\small\item\em obtains address of PE Header in memory from a D\+OS Header \end{DoxyCompactList}\item 
+B\+O\+OL \mbox{\hyperlink{_p_e_utils_8h_ae9caac1aa0cc4b8e9010a64ca97bdd7d}{P\+E32\+\_\+\+Enum\+Exports}} (H\+M\+O\+D\+U\+LE h\+Mod, \mbox{\hyperlink{_p_e_utils_8h_a186458d8ce041d138151d0ec7532d0fa}{Enum\+Exports\+Callback}} p\+Func\+Callback, L\+P\+V\+O\+ID User\+Args)
+\begin{DoxyCompactList}\small\item\em enumerate exports from a given module image base \end{DoxyCompactList}\item 
+B\+O\+OL \mbox{\hyperlink{_p_e_utils_8h_a9450841a7959a1ea33d808b50d4096a7}{P\+E32\+\_\+\+Enum\+Imports}} (H\+M\+O\+D\+U\+LE h\+Mod, \mbox{\hyperlink{_p_e_utils_8h_a9cdff5c5e86fad1599948d3a1b5d4d31}{Enum\+Imports\+Callback}} p\+Fun\+Callback, L\+P\+V\+O\+ID User\+Args)
+\begin{DoxyCompactList}\small\item\em enumerate exports from a given module image base \end{DoxyCompactList}\item 
+B\+O\+OL \mbox{\hyperlink{_p_e_utils_8h_ad271c48f128c6e5e395efababe44ec73}{P\+E32\+\_\+\+Enum\+Sections}} (H\+M\+O\+D\+U\+LE h\+Mod, \mbox{\hyperlink{_p_e_utils_8h_a9dfb32456dddea6e1b4e69b7f8eee547}{Enum\+Sections\+Callback}} p\+Func\+Callback, L\+P\+V\+O\+ID lp\+User\+Args)
+\begin{DoxyCompactList}\small\item\em enumerate sections from a given module image base \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Utility functions to browse a PE in memory. 
+
+\begin{DoxyAuthor}{Author}
+Tomtombinary 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+18 août 2018 
+\end{DoxyDate}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_p_e_utils_8h_ab25828807010c5c77b42ee0e898d8598}\label{_p_e_utils_8h_ab25828807010c5c77b42ee0e898d8598}} 
+\index{P\+E\+Utils.\+h@{P\+E\+Utils.\+h}!D\+U\+M\+P\+\_\+\+F\+I\+E\+LD@{D\+U\+M\+P\+\_\+\+F\+I\+E\+LD}}
+\index{D\+U\+M\+P\+\_\+\+F\+I\+E\+LD@{D\+U\+M\+P\+\_\+\+F\+I\+E\+LD}!P\+E\+Utils.\+h@{P\+E\+Utils.\+h}}
+\subsubsection{\texorpdfstring{D\+U\+M\+P\+\_\+\+F\+I\+E\+LD}{DUMP\_FIELD}}
+{\footnotesize\ttfamily \#define D\+U\+M\+P\+\_\+\+F\+I\+E\+LD(\begin{DoxyParamCaption}\item[{}]{Field\+Name,  }\item[{}]{Struct }\end{DoxyParamCaption})~printf(\char`\"{}\%s\+: \%x\textbackslash{}n\char`\"{},\#Field\+Name,Struct-\/$>$Field\+Name)}
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{_p_e_utils_8h_a186458d8ce041d138151d0ec7532d0fa}\label{_p_e_utils_8h_a186458d8ce041d138151d0ec7532d0fa}} 
+\index{P\+E\+Utils.\+h@{P\+E\+Utils.\+h}!Enum\+Exports\+Callback@{Enum\+Exports\+Callback}}
+\index{Enum\+Exports\+Callback@{Enum\+Exports\+Callback}!P\+E\+Utils.\+h@{P\+E\+Utils.\+h}}
+\subsubsection{\texorpdfstring{Enum\+Exports\+Callback}{EnumExportsCallback}}
+{\footnotesize\ttfamily typedef B\+O\+OL($\ast$ Enum\+Exports\+Callback) (\mbox{\hyperlink{_p_e_utils_8h_a30d5b1b38cae0b6c0a3d5a0730fe4c29}{P\+E\+X\+P\+O\+R\+T\+\_\+\+E\+N\+T\+RY}} lp\+Export\+Entry, L\+P\+V\+O\+ID User\+Args)}
+
+Callback function type for P\+E32\+\_\+\+Enum\+Exports\+Callback \mbox{\Hypertarget{_p_e_utils_8h_a9cdff5c5e86fad1599948d3a1b5d4d31}\label{_p_e_utils_8h_a9cdff5c5e86fad1599948d3a1b5d4d31}} 
+\index{P\+E\+Utils.\+h@{P\+E\+Utils.\+h}!Enum\+Imports\+Callback@{Enum\+Imports\+Callback}}
+\index{Enum\+Imports\+Callback@{Enum\+Imports\+Callback}!P\+E\+Utils.\+h@{P\+E\+Utils.\+h}}
+\subsubsection{\texorpdfstring{Enum\+Imports\+Callback}{EnumImportsCallback}}
+{\footnotesize\ttfamily typedef B\+O\+OL($\ast$ Enum\+Imports\+Callback) (\mbox{\hyperlink{_p_e_utils_8h_a3eda83cfc187f4e138a00c02429fa874}{P\+I\+M\+P\+O\+R\+T\+\_\+\+E\+N\+T\+RY}} lp\+Import\+Entry, L\+P\+V\+O\+ID User\+Args)}
+
+Callback function type for P\+E32\+\_\+\+Enum\+Imports\+Callback \mbox{\Hypertarget{_p_e_utils_8h_a9dfb32456dddea6e1b4e69b7f8eee547}\label{_p_e_utils_8h_a9dfb32456dddea6e1b4e69b7f8eee547}} 
+\index{P\+E\+Utils.\+h@{P\+E\+Utils.\+h}!Enum\+Sections\+Callback@{Enum\+Sections\+Callback}}
+\index{Enum\+Sections\+Callback@{Enum\+Sections\+Callback}!P\+E\+Utils.\+h@{P\+E\+Utils.\+h}}
+\subsubsection{\texorpdfstring{Enum\+Sections\+Callback}{EnumSectionsCallback}}
+{\footnotesize\ttfamily typedef B\+O\+OL($\ast$ Enum\+Sections\+Callback) (\mbox{\hyperlink{_p_e_utils_8h_a07a72e52209060e126dc0bb25e396cbe}{P\+S\+E\+C\+T\+I\+O\+N\+\_\+\+E\+N\+T\+RY}} lp\+Section\+Entry, L\+P\+V\+O\+ID User\+Args)}
+
+Callback function type for P\+E32\+\_\+\+Enum\+Sections \mbox{\Hypertarget{_p_e_utils_8h_a8fd5bbb56a4a0b58b194b88fb186b318}\label{_p_e_utils_8h_a8fd5bbb56a4a0b58b194b88fb186b318}} 
+\index{P\+E\+Utils.\+h@{P\+E\+Utils.\+h}!E\+X\+P\+O\+R\+T\+\_\+\+E\+N\+T\+RY@{E\+X\+P\+O\+R\+T\+\_\+\+E\+N\+T\+RY}}
+\index{E\+X\+P\+O\+R\+T\+\_\+\+E\+N\+T\+RY@{E\+X\+P\+O\+R\+T\+\_\+\+E\+N\+T\+RY}!P\+E\+Utils.\+h@{P\+E\+Utils.\+h}}
+\subsubsection{\texorpdfstring{E\+X\+P\+O\+R\+T\+\_\+\+E\+N\+T\+RY}{EXPORT\_ENTRY}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct___e_x_p_o_r_t___e_n_t_r_y}{\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+E\+N\+T\+RY}} \mbox{\hyperlink{struct_e_x_p_o_r_t___e_n_t_r_y}{E\+X\+P\+O\+R\+T\+\_\+\+E\+N\+T\+RY}}}
+
+\mbox{\Hypertarget{_p_e_utils_8h_aba6ab9438b967fb111a9b6d2b6bf2957}\label{_p_e_utils_8h_aba6ab9438b967fb111a9b6d2b6bf2957}} 
+\index{P\+E\+Utils.\+h@{P\+E\+Utils.\+h}!I\+M\+P\+O\+R\+T\+\_\+\+E\+N\+T\+RY@{I\+M\+P\+O\+R\+T\+\_\+\+E\+N\+T\+RY}}
+\index{I\+M\+P\+O\+R\+T\+\_\+\+E\+N\+T\+RY@{I\+M\+P\+O\+R\+T\+\_\+\+E\+N\+T\+RY}!P\+E\+Utils.\+h@{P\+E\+Utils.\+h}}
+\subsubsection{\texorpdfstring{I\+M\+P\+O\+R\+T\+\_\+\+E\+N\+T\+RY}{IMPORT\_ENTRY}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct___i_m_p_o_r_t___e_n_t_r_y}{\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+E\+N\+T\+RY}} \mbox{\hyperlink{struct_i_m_p_o_r_t___e_n_t_r_y}{I\+M\+P\+O\+R\+T\+\_\+\+E\+N\+T\+RY}}}
+
+\mbox{\Hypertarget{_p_e_utils_8h_a30d5b1b38cae0b6c0a3d5a0730fe4c29}\label{_p_e_utils_8h_a30d5b1b38cae0b6c0a3d5a0730fe4c29}} 
+\index{P\+E\+Utils.\+h@{P\+E\+Utils.\+h}!P\+E\+X\+P\+O\+R\+T\+\_\+\+E\+N\+T\+RY@{P\+E\+X\+P\+O\+R\+T\+\_\+\+E\+N\+T\+RY}}
+\index{P\+E\+X\+P\+O\+R\+T\+\_\+\+E\+N\+T\+RY@{P\+E\+X\+P\+O\+R\+T\+\_\+\+E\+N\+T\+RY}!P\+E\+Utils.\+h@{P\+E\+Utils.\+h}}
+\subsubsection{\texorpdfstring{P\+E\+X\+P\+O\+R\+T\+\_\+\+E\+N\+T\+RY}{PEXPORT\_ENTRY}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct___e_x_p_o_r_t___e_n_t_r_y}{\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+E\+N\+T\+RY}}$\ast$ \mbox{\hyperlink{_p_e_utils_8h_a30d5b1b38cae0b6c0a3d5a0730fe4c29}{P\+E\+X\+P\+O\+R\+T\+\_\+\+E\+N\+T\+RY}}}
+
+\mbox{\Hypertarget{_p_e_utils_8h_a3eda83cfc187f4e138a00c02429fa874}\label{_p_e_utils_8h_a3eda83cfc187f4e138a00c02429fa874}} 
+\index{P\+E\+Utils.\+h@{P\+E\+Utils.\+h}!P\+I\+M\+P\+O\+R\+T\+\_\+\+E\+N\+T\+RY@{P\+I\+M\+P\+O\+R\+T\+\_\+\+E\+N\+T\+RY}}
+\index{P\+I\+M\+P\+O\+R\+T\+\_\+\+E\+N\+T\+RY@{P\+I\+M\+P\+O\+R\+T\+\_\+\+E\+N\+T\+RY}!P\+E\+Utils.\+h@{P\+E\+Utils.\+h}}
+\subsubsection{\texorpdfstring{P\+I\+M\+P\+O\+R\+T\+\_\+\+E\+N\+T\+RY}{PIMPORT\_ENTRY}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct___i_m_p_o_r_t___e_n_t_r_y}{\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+E\+N\+T\+RY}}$\ast$ \mbox{\hyperlink{_p_e_utils_8h_a3eda83cfc187f4e138a00c02429fa874}{P\+I\+M\+P\+O\+R\+T\+\_\+\+E\+N\+T\+RY}}}
+
+\mbox{\Hypertarget{_p_e_utils_8h_a07a72e52209060e126dc0bb25e396cbe}\label{_p_e_utils_8h_a07a72e52209060e126dc0bb25e396cbe}} 
+\index{P\+E\+Utils.\+h@{P\+E\+Utils.\+h}!P\+S\+E\+C\+T\+I\+O\+N\+\_\+\+E\+N\+T\+RY@{P\+S\+E\+C\+T\+I\+O\+N\+\_\+\+E\+N\+T\+RY}}
+\index{P\+S\+E\+C\+T\+I\+O\+N\+\_\+\+E\+N\+T\+RY@{P\+S\+E\+C\+T\+I\+O\+N\+\_\+\+E\+N\+T\+RY}!P\+E\+Utils.\+h@{P\+E\+Utils.\+h}}
+\subsubsection{\texorpdfstring{P\+S\+E\+C\+T\+I\+O\+N\+\_\+\+E\+N\+T\+RY}{PSECTION\_ENTRY}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct___s_e_c_t_i_o_n___e_n_t_r_y}{\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+E\+N\+T\+RY}}$\ast$ \mbox{\hyperlink{_p_e_utils_8h_a07a72e52209060e126dc0bb25e396cbe}{P\+S\+E\+C\+T\+I\+O\+N\+\_\+\+E\+N\+T\+RY}}}
+
+\mbox{\Hypertarget{_p_e_utils_8h_aad187ca410c79891da72d502fb243ca8}\label{_p_e_utils_8h_aad187ca410c79891da72d502fb243ca8}} 
+\index{P\+E\+Utils.\+h@{P\+E\+Utils.\+h}!S\+E\+C\+T\+I\+O\+N\+\_\+\+E\+N\+T\+RY@{S\+E\+C\+T\+I\+O\+N\+\_\+\+E\+N\+T\+RY}}
+\index{S\+E\+C\+T\+I\+O\+N\+\_\+\+E\+N\+T\+RY@{S\+E\+C\+T\+I\+O\+N\+\_\+\+E\+N\+T\+RY}!P\+E\+Utils.\+h@{P\+E\+Utils.\+h}}
+\subsubsection{\texorpdfstring{S\+E\+C\+T\+I\+O\+N\+\_\+\+E\+N\+T\+RY}{SECTION\_ENTRY}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct___s_e_c_t_i_o_n___e_n_t_r_y}{\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+E\+N\+T\+RY}} \mbox{\hyperlink{_p_e_utils_8h_aad187ca410c79891da72d502fb243ca8}{S\+E\+C\+T\+I\+O\+N\+\_\+\+E\+N\+T\+RY}}}
+
+
+
+each sections found in PE Header is represented by this structure Section\+Data points to section in memory Section\+Limit points to the section end in memory 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_p_e_utils_8h_ae9caac1aa0cc4b8e9010a64ca97bdd7d}\label{_p_e_utils_8h_ae9caac1aa0cc4b8e9010a64ca97bdd7d}} 
+\index{P\+E\+Utils.\+h@{P\+E\+Utils.\+h}!P\+E32\+\_\+\+Enum\+Exports@{P\+E32\+\_\+\+Enum\+Exports}}
+\index{P\+E32\+\_\+\+Enum\+Exports@{P\+E32\+\_\+\+Enum\+Exports}!P\+E\+Utils.\+h@{P\+E\+Utils.\+h}}
+\subsubsection{\texorpdfstring{P\+E32\+\_\+\+Enum\+Exports()}{PE32\_EnumExports()}}
+{\footnotesize\ttfamily B\+O\+OL P\+E32\+\_\+\+Enum\+Exports (\begin{DoxyParamCaption}\item[{H\+M\+O\+D\+U\+LE}]{h\+Mod,  }\item[{\mbox{\hyperlink{_p_e_utils_8h_a186458d8ce041d138151d0ec7532d0fa}{Enum\+Exports\+Callback}}}]{p\+Callback,  }\item[{L\+P\+V\+O\+ID}]{User\+Args }\end{DoxyParamCaption})}
+
+
+
+enumerate exports from a given module image base 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h\+Mod} & module image base \\
+\hline
+{\em p\+Func\+Callback} & callback function called for each exports \\
+\hline
+{\em User\+Args} & \mbox{[}optional\mbox{]} extras arguments for callback function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if all exports have been enumerated 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_p_e_utils_8h_a9450841a7959a1ea33d808b50d4096a7}\label{_p_e_utils_8h_a9450841a7959a1ea33d808b50d4096a7}} 
+\index{P\+E\+Utils.\+h@{P\+E\+Utils.\+h}!P\+E32\+\_\+\+Enum\+Imports@{P\+E32\+\_\+\+Enum\+Imports}}
+\index{P\+E32\+\_\+\+Enum\+Imports@{P\+E32\+\_\+\+Enum\+Imports}!P\+E\+Utils.\+h@{P\+E\+Utils.\+h}}
+\subsubsection{\texorpdfstring{P\+E32\+\_\+\+Enum\+Imports()}{PE32\_EnumImports()}}
+{\footnotesize\ttfamily B\+O\+OL P\+E32\+\_\+\+Enum\+Imports (\begin{DoxyParamCaption}\item[{H\+M\+O\+D\+U\+LE}]{h\+Mod,  }\item[{\mbox{\hyperlink{_p_e_utils_8h_a9cdff5c5e86fad1599948d3a1b5d4d31}{Enum\+Imports\+Callback}}}]{p\+Callback,  }\item[{L\+P\+V\+O\+ID}]{User\+Args }\end{DoxyParamCaption})}
+
+
+
+enumerate exports from a given module image base 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h\+Mod} & module image base \\
+\hline
+{\em p\+Func\+Callback} & callback function called for each imports \\
+\hline
+{\em User\+Args} & \mbox{[}optional\mbox{]} extras arguments for callback function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if all imports have been enumerated 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_p_e_utils_8h_ad271c48f128c6e5e395efababe44ec73}\label{_p_e_utils_8h_ad271c48f128c6e5e395efababe44ec73}} 
+\index{P\+E\+Utils.\+h@{P\+E\+Utils.\+h}!P\+E32\+\_\+\+Enum\+Sections@{P\+E32\+\_\+\+Enum\+Sections}}
+\index{P\+E32\+\_\+\+Enum\+Sections@{P\+E32\+\_\+\+Enum\+Sections}!P\+E\+Utils.\+h@{P\+E\+Utils.\+h}}
+\subsubsection{\texorpdfstring{P\+E32\+\_\+\+Enum\+Sections()}{PE32\_EnumSections()}}
+{\footnotesize\ttfamily B\+O\+OL P\+E32\+\_\+\+Enum\+Sections (\begin{DoxyParamCaption}\item[{H\+M\+O\+D\+U\+LE}]{h\+Mod,  }\item[{\mbox{\hyperlink{_p_e_utils_8h_a9dfb32456dddea6e1b4e69b7f8eee547}{Enum\+Sections\+Callback}}}]{p\+Func\+Callback,  }\item[{L\+P\+V\+O\+ID}]{lp\+User\+Args }\end{DoxyParamCaption})}
+
+
+
+enumerate sections from a given module image base 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h\+Mod} & module image base \\
+\hline
+{\em p\+Func\+Callback} & callback function called for each sections \\
+\hline
+{\em User\+Args} & \mbox{[}optional\mbox{]} extras arguments for callback function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if all sections have been enumerated 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_p_e_utils_8h_aeccf9e19618fff5f1367c2da514c6c32}\label{_p_e_utils_8h_aeccf9e19618fff5f1367c2da514c6c32}} 
+\index{P\+E\+Utils.\+h@{P\+E\+Utils.\+h}!P\+E32\+\_\+\+Get\+Nt\+Headers@{P\+E32\+\_\+\+Get\+Nt\+Headers}}
+\index{P\+E32\+\_\+\+Get\+Nt\+Headers@{P\+E32\+\_\+\+Get\+Nt\+Headers}!P\+E\+Utils.\+h@{P\+E\+Utils.\+h}}
+\subsubsection{\texorpdfstring{P\+E32\+\_\+\+Get\+Nt\+Headers()}{PE32\_GetNtHeaders()}}
+{\footnotesize\ttfamily P\+I\+M\+A\+G\+E\+\_\+\+N\+T\+\_\+\+H\+E\+A\+D\+E\+R\+S32 P\+E32\+\_\+\+Get\+Nt\+Headers (\begin{DoxyParamCaption}\item[{H\+M\+O\+D\+U\+LE}]{h\+Mod }\end{DoxyParamCaption})}
+
+
+
+obtains address of PE Header in memory from a D\+OS Header 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h\+Mod} & module image base \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the PE Header address. N\+U\+LL if PE Header has invalid signature or is not a 32 bits header 
+\end{DoxyReturn}

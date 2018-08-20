@@ -1,0 +1,73 @@
+\hypertarget{_mem_utils_8h}{}\section{P\+E\+Utils/\+Mem\+Utils.h File Reference}
+\label{_mem_utils_8h}\index{P\+E\+Utils/\+Mem\+Utils.\+h@{P\+E\+Utils/\+Mem\+Utils.\+h}}
+
+
+Utility functions to walk through P\+EB.  
+
+
+{\ttfamily \#include \char`\"{}stdafx.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$winternl.\+h$>$}\newline
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef B\+O\+OL($\ast$ \mbox{\hyperlink{_mem_utils_8h_aeb1cdab355b872f96345f146fbd9c739}{Enum\+Modules\+Callback}}) (P\+L\+D\+R\+\_\+\+D\+A\+T\+A\+\_\+\+T\+A\+B\+L\+E\+\_\+\+E\+N\+T\+RY p\+Ldr\+Data\+Entry, L\+P\+V\+O\+ID User\+Args)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+B\+O\+OL \mbox{\hyperlink{_mem_utils_8h_aea16b2dda5665a3df541f6624eb917df}{P\+E\+B\+Utils\+\_\+\+Enum\+Modules}} (\mbox{\hyperlink{_mem_utils_8h_aeb1cdab355b872f96345f146fbd9c739}{Enum\+Modules\+Callback}} Callback, P\+V\+O\+ID User\+Args)
+\item 
+B\+O\+OL \mbox{\hyperlink{_mem_utils_8h_a2262d456ed24b3ae78f57112656eab5d}{Mem\+Is\+Null}} (L\+P\+V\+O\+ID Buffer, D\+W\+O\+RD Size\+In\+Bytes)
+\begin{DoxyCompactList}\small\item\em Check if a memory zone is null. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Utility functions to walk through P\+EB. 
+
+\begin{DoxyAuthor}{Author}
+Tomtombinary 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+18 août 2018 
+\end{DoxyDate}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{_mem_utils_8h_aeb1cdab355b872f96345f146fbd9c739}\label{_mem_utils_8h_aeb1cdab355b872f96345f146fbd9c739}} 
+\index{Mem\+Utils.\+h@{Mem\+Utils.\+h}!Enum\+Modules\+Callback@{Enum\+Modules\+Callback}}
+\index{Enum\+Modules\+Callback@{Enum\+Modules\+Callback}!Mem\+Utils.\+h@{Mem\+Utils.\+h}}
+\subsubsection{\texorpdfstring{Enum\+Modules\+Callback}{EnumModulesCallback}}
+{\footnotesize\ttfamily typedef B\+O\+OL($\ast$ Enum\+Modules\+Callback) (P\+L\+D\+R\+\_\+\+D\+A\+T\+A\+\_\+\+T\+A\+B\+L\+E\+\_\+\+E\+N\+T\+RY p\+Ldr\+Data\+Entry, L\+P\+V\+O\+ID User\+Args)}
+
+callback prototype for P\+E\+B\+Utils\+\_\+\+Enum\+Modules 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_mem_utils_8h_a2262d456ed24b3ae78f57112656eab5d}\label{_mem_utils_8h_a2262d456ed24b3ae78f57112656eab5d}} 
+\index{Mem\+Utils.\+h@{Mem\+Utils.\+h}!Mem\+Is\+Null@{Mem\+Is\+Null}}
+\index{Mem\+Is\+Null@{Mem\+Is\+Null}!Mem\+Utils.\+h@{Mem\+Utils.\+h}}
+\subsubsection{\texorpdfstring{Mem\+Is\+Null()}{MemIsNull()}}
+{\footnotesize\ttfamily B\+O\+OL Mem\+Is\+Null (\begin{DoxyParamCaption}\item[{L\+P\+V\+O\+ID}]{Buffer,  }\item[{D\+W\+O\+RD}]{Size\+In\+Bytes }\end{DoxyParamCaption})}
+
+
+
+Check if a memory zone is null. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Buffer} & pointer to a buffer \\
+\hline
+{\em Size\+In\+Bytes} & buffer size in bytes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if memory is filled with zeros 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_mem_utils_8h_aea16b2dda5665a3df541f6624eb917df}\label{_mem_utils_8h_aea16b2dda5665a3df541f6624eb917df}} 
+\index{Mem\+Utils.\+h@{Mem\+Utils.\+h}!P\+E\+B\+Utils\+\_\+\+Enum\+Modules@{P\+E\+B\+Utils\+\_\+\+Enum\+Modules}}
+\index{P\+E\+B\+Utils\+\_\+\+Enum\+Modules@{P\+E\+B\+Utils\+\_\+\+Enum\+Modules}!Mem\+Utils.\+h@{Mem\+Utils.\+h}}
+\subsubsection{\texorpdfstring{P\+E\+B\+Utils\+\_\+\+Enum\+Modules()}{PEBUtils\_EnumModules()}}
+{\footnotesize\ttfamily B\+O\+OL P\+E\+B\+Utils\+\_\+\+Enum\+Modules (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_mem_utils_8h_aeb1cdab355b872f96345f146fbd9c739}{Enum\+Modules\+Callback}}}]{Callback,  }\item[{P\+V\+O\+ID}]{User\+Args }\end{DoxyParamCaption})}
+

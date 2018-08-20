@@ -1,0 +1,122 @@
+\hypertarget{_p_e_utils_8c}{}\section{P\+E\+Utils/\+P\+E\+Utils.c File Reference}
+\label{_p_e_utils_8c}\index{P\+E\+Utils/\+P\+E\+Utils.\+c@{P\+E\+Utils/\+P\+E\+Utils.\+c}}
+
+
+Defines function described in file \mbox{\hyperlink{_p_e_utils_8h}{P\+E\+Utils.\+h}}.  
+
+
+{\ttfamily \#include \char`\"{}stdafx.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}P\+E\+Utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Mem\+Utils.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+P\+I\+M\+A\+G\+E\+\_\+\+N\+T\+\_\+\+H\+E\+A\+D\+E\+R\+S32 \mbox{\hyperlink{_p_e_utils_8c_aeccf9e19618fff5f1367c2da514c6c32}{P\+E32\+\_\+\+Get\+Nt\+Headers}} (H\+M\+O\+D\+U\+LE h\+Mod)
+\begin{DoxyCompactList}\small\item\em obtains address of PE Header in memory from a D\+OS Header \end{DoxyCompactList}\item 
+B\+O\+OL \mbox{\hyperlink{_p_e_utils_8c_ad271c48f128c6e5e395efababe44ec73}{P\+E32\+\_\+\+Enum\+Sections}} (H\+M\+O\+D\+U\+LE h\+Mod, \mbox{\hyperlink{_p_e_utils_8h_a9dfb32456dddea6e1b4e69b7f8eee547}{Enum\+Sections\+Callback}} p\+Func\+Callback, L\+P\+V\+O\+ID lp\+User\+Args)
+\begin{DoxyCompactList}\small\item\em enumerate sections from a given module image base \end{DoxyCompactList}\item 
+B\+O\+OL \mbox{\hyperlink{_p_e_utils_8c_a90e22f99a399afc0608616edde5666c6}{P\+E32\+\_\+\+Enum\+Exports}} (H\+M\+O\+D\+U\+LE h\+Mod, \mbox{\hyperlink{_p_e_utils_8h_a186458d8ce041d138151d0ec7532d0fa}{Enum\+Exports\+Callback}} p\+Callback, L\+P\+V\+O\+ID User\+Args)
+\begin{DoxyCompactList}\small\item\em enumerate exports from a given module image base \end{DoxyCompactList}\item 
+B\+O\+OL \mbox{\hyperlink{_p_e_utils_8c_a510601bcb0cc9048919a77a566e62ff2}{P\+E32\+\_\+\+Enum\+Imports}} (H\+M\+O\+D\+U\+LE h\+Mod, \mbox{\hyperlink{_p_e_utils_8h_a9cdff5c5e86fad1599948d3a1b5d4d31}{Enum\+Imports\+Callback}} p\+Callback, L\+P\+V\+O\+ID User\+Args)
+\begin{DoxyCompactList}\small\item\em enumerate exports from a given module image base \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Defines function described in file \mbox{\hyperlink{_p_e_utils_8h}{P\+E\+Utils.\+h}}. 
+
+\begin{DoxyAuthor}{Author}
+Tomtombinary 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+18 août 2018 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_p_e_utils_8c_a90e22f99a399afc0608616edde5666c6}\label{_p_e_utils_8c_a90e22f99a399afc0608616edde5666c6}} 
+\index{P\+E\+Utils.\+c@{P\+E\+Utils.\+c}!P\+E32\+\_\+\+Enum\+Exports@{P\+E32\+\_\+\+Enum\+Exports}}
+\index{P\+E32\+\_\+\+Enum\+Exports@{P\+E32\+\_\+\+Enum\+Exports}!P\+E\+Utils.\+c@{P\+E\+Utils.\+c}}
+\subsubsection{\texorpdfstring{P\+E32\+\_\+\+Enum\+Exports()}{PE32\_EnumExports()}}
+{\footnotesize\ttfamily B\+O\+OL P\+E32\+\_\+\+Enum\+Exports (\begin{DoxyParamCaption}\item[{H\+M\+O\+D\+U\+LE}]{h\+Mod,  }\item[{\mbox{\hyperlink{_p_e_utils_8h_a186458d8ce041d138151d0ec7532d0fa}{Enum\+Exports\+Callback}}}]{p\+Func\+Callback,  }\item[{L\+P\+V\+O\+ID}]{User\+Args }\end{DoxyParamCaption})}
+
+
+
+enumerate exports from a given module image base 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h\+Mod} & module image base \\
+\hline
+{\em p\+Func\+Callback} & callback function called for each exports \\
+\hline
+{\em User\+Args} & \mbox{[}optional\mbox{]} extras arguments for callback function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if all exports have been enumerated 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_p_e_utils_8c_a510601bcb0cc9048919a77a566e62ff2}\label{_p_e_utils_8c_a510601bcb0cc9048919a77a566e62ff2}} 
+\index{P\+E\+Utils.\+c@{P\+E\+Utils.\+c}!P\+E32\+\_\+\+Enum\+Imports@{P\+E32\+\_\+\+Enum\+Imports}}
+\index{P\+E32\+\_\+\+Enum\+Imports@{P\+E32\+\_\+\+Enum\+Imports}!P\+E\+Utils.\+c@{P\+E\+Utils.\+c}}
+\subsubsection{\texorpdfstring{P\+E32\+\_\+\+Enum\+Imports()}{PE32\_EnumImports()}}
+{\footnotesize\ttfamily B\+O\+OL P\+E32\+\_\+\+Enum\+Imports (\begin{DoxyParamCaption}\item[{H\+M\+O\+D\+U\+LE}]{h\+Mod,  }\item[{\mbox{\hyperlink{_p_e_utils_8h_a9cdff5c5e86fad1599948d3a1b5d4d31}{Enum\+Imports\+Callback}}}]{p\+Fun\+Callback,  }\item[{L\+P\+V\+O\+ID}]{User\+Args }\end{DoxyParamCaption})}
+
+
+
+enumerate exports from a given module image base 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h\+Mod} & module image base \\
+\hline
+{\em p\+Func\+Callback} & callback function called for each imports \\
+\hline
+{\em User\+Args} & \mbox{[}optional\mbox{]} extras arguments for callback function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if all imports have been enumerated 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_p_e_utils_8c_ad271c48f128c6e5e395efababe44ec73}\label{_p_e_utils_8c_ad271c48f128c6e5e395efababe44ec73}} 
+\index{P\+E\+Utils.\+c@{P\+E\+Utils.\+c}!P\+E32\+\_\+\+Enum\+Sections@{P\+E32\+\_\+\+Enum\+Sections}}
+\index{P\+E32\+\_\+\+Enum\+Sections@{P\+E32\+\_\+\+Enum\+Sections}!P\+E\+Utils.\+c@{P\+E\+Utils.\+c}}
+\subsubsection{\texorpdfstring{P\+E32\+\_\+\+Enum\+Sections()}{PE32\_EnumSections()}}
+{\footnotesize\ttfamily B\+O\+OL P\+E32\+\_\+\+Enum\+Sections (\begin{DoxyParamCaption}\item[{H\+M\+O\+D\+U\+LE}]{h\+Mod,  }\item[{\mbox{\hyperlink{_p_e_utils_8h_a9dfb32456dddea6e1b4e69b7f8eee547}{Enum\+Sections\+Callback}}}]{p\+Func\+Callback,  }\item[{L\+P\+V\+O\+ID}]{lp\+User\+Args }\end{DoxyParamCaption})}
+
+
+
+enumerate sections from a given module image base 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h\+Mod} & module image base \\
+\hline
+{\em p\+Func\+Callback} & callback function called for each sections \\
+\hline
+{\em User\+Args} & \mbox{[}optional\mbox{]} extras arguments for callback function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if all sections have been enumerated 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_p_e_utils_8c_aeccf9e19618fff5f1367c2da514c6c32}\label{_p_e_utils_8c_aeccf9e19618fff5f1367c2da514c6c32}} 
+\index{P\+E\+Utils.\+c@{P\+E\+Utils.\+c}!P\+E32\+\_\+\+Get\+Nt\+Headers@{P\+E32\+\_\+\+Get\+Nt\+Headers}}
+\index{P\+E32\+\_\+\+Get\+Nt\+Headers@{P\+E32\+\_\+\+Get\+Nt\+Headers}!P\+E\+Utils.\+c@{P\+E\+Utils.\+c}}
+\subsubsection{\texorpdfstring{P\+E32\+\_\+\+Get\+Nt\+Headers()}{PE32\_GetNtHeaders()}}
+{\footnotesize\ttfamily P\+I\+M\+A\+G\+E\+\_\+\+N\+T\+\_\+\+H\+E\+A\+D\+E\+R\+S32 P\+E32\+\_\+\+Get\+Nt\+Headers (\begin{DoxyParamCaption}\item[{H\+M\+O\+D\+U\+LE}]{h\+Mod }\end{DoxyParamCaption})}
+
+
+
+obtains address of PE Header in memory from a D\+OS Header 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h\+Mod} & module image base \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the PE Header address. N\+U\+LL if PE Header has invalid signature or is not a 32 bits header 
+\end{DoxyReturn}

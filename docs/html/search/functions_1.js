@@ -1,0 +1,8 @@
+var searchData=
+[
+  ['pe32_5fenumexports',['PE32_EnumExports',['../_p_e_utils_8c.html#a90e22f99a399afc0608616edde5666c6',1,'PE32_EnumExports(HMODULE hMod, EnumExportsCallback pCallback, LPVOID UserArgs):&#160;PEUtils.c'],['../_p_e_utils_8h.html#ae9caac1aa0cc4b8e9010a64ca97bdd7d',1,'PE32_EnumExports(HMODULE hMod, EnumExportsCallback pFuncCallback, LPVOID UserArgs):&#160;PEUtils.c']]],
+  ['pe32_5fenumimports',['PE32_EnumImports',['../_p_e_utils_8c.html#a510601bcb0cc9048919a77a566e62ff2',1,'PE32_EnumImports(HMODULE hMod, EnumImportsCallback pCallback, LPVOID UserArgs):&#160;PEUtils.c'],['../_p_e_utils_8h.html#a9450841a7959a1ea33d808b50d4096a7',1,'PE32_EnumImports(HMODULE hMod, EnumImportsCallback pFunCallback, LPVOID UserArgs):&#160;PEUtils.c']]],
+  ['pe32_5fenumsections',['PE32_EnumSections',['../_p_e_utils_8c.html#ad271c48f128c6e5e395efababe44ec73',1,'PE32_EnumSections(HMODULE hMod, EnumSectionsCallback pFuncCallback, LPVOID lpUserArgs):&#160;PEUtils.c'],['../_p_e_utils_8h.html#ad271c48f128c6e5e395efababe44ec73',1,'PE32_EnumSections(HMODULE hMod, EnumSectionsCallback pFuncCallback, LPVOID lpUserArgs):&#160;PEUtils.c']]],
+  ['pe32_5fgetntheaders',['PE32_GetNtHeaders',['../_p_e_utils_8c.html#aeccf9e19618fff5f1367c2da514c6c32',1,'PE32_GetNtHeaders(HMODULE hMod):&#160;PEUtils.c'],['../_p_e_utils_8h.html#aeccf9e19618fff5f1367c2da514c6c32',1,'PE32_GetNtHeaders(HMODULE hMod):&#160;PEUtils.c']]],
+  ['pebutils_5fenummodules',['PEBUtils_EnumModules',['../_mem_utils_8c.html#aea16b2dda5665a3df541f6624eb917df',1,'PEBUtils_EnumModules(EnumModulesCallback Callback, PVOID UserArgs):&#160;MemUtils.c'],['../_mem_utils_8h.html#aea16b2dda5665a3df541f6624eb917df',1,'PEBUtils_EnumModules(EnumModulesCallback Callback, PVOID UserArgs):&#160;MemUtils.c']]]
+];
