@@ -1,6 +1,6 @@
 # PEUtils
 
-PEUtils is a light library written in C to browse a PE in memory. This library is callback oriented design. Main fonctionnalities are:
+PEUtils is a library written in C to browse a PE in memory. This library is callback oriented design. Main fonctionnalities are:
 
 * enumerate sections
 * enumerate exports
@@ -9,7 +9,7 @@ PEUtils is a light library written in C to browse a PE in memory. This library i
 
 #### how to use it ?
 
-*doc* directory contains a html documentation generated with doxygen. The project contains also  *Examples* directory with sample code.
+*doc* directory contains a html documentation generated with doxygen. The project contains also  *Examples* directory with samples code.
 
 #### limits
 
