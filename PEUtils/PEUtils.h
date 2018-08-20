@@ -1,6 +1,6 @@
 /**
  * \file PEUtils.h
- * \brief Utility functions to walk through a PE in memory
+ * \brief Utility functions to browse a PE in memory
  * \author Tomtombinary
  * \version 1.0
  * \date 18 août 2018
