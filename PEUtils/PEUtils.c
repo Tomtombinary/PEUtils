@@ -102,6 +102,37 @@ BOOL PE32_EnumExports(HMODULE hMod, EnumExportsCallback pCallback, LPVOID UserAr
 	return bEnumTerminated;
 }
 
+BOOL PE32_EnumRelocations(HMODULE hMod, EnumRelocationsCallback pFuncCallback, LPVOID lpUserArgs)
+{
+	PIMAGE_NT_HEADERS32 lpNtHeader = PE32_GetNtHeaders(hMod);
+	PIMAGE_BASE_RELOCATION BaseRelocation;
+	RELOC_ENTRY Entry;
+
+	PWORD Items;
+	DWORD nItems;
+	DWORD BaseRelocDescriptorRVA = lpNtHeader->OptionalHeader.DataDirectory[IMAGE_DIRECTORY_ENTRY_BASERELOC].VirtualAddress;
+	if(BaseRelocDescriptorRVA != 0)
+	{	
+		BaseRelocation = (DWORD)hMod + BaseRelocDescriptorRVA;
+		while(!MemIsNull(BaseRelocation, sizeof(IMAGE_BASE_RELOCATION)))
+		{ 
+			Items = (PWORD)((DWORD)BaseRelocation + sizeof(IMAGE_BASE_RELOCATION));
+			nItems = (BaseRelocation->SizeOfBlock - sizeof(IMAGE_BASE_RELOCATION)) / sizeof(WORD);
+			Entry.BaseRelocationBlock = BaseRelocation;
+			for (unsigned int i = 0; i < nItems; i++)
+			{
+				Entry.Type = (Items[i] >> 12) & 0xF;
+				Entry.Offset = Items[i] & 0xFFF;
+				Entry.RelocationVA = (DWORD)hMod + BaseRelocation->VirtualAddress + Entry.Offset;
+				if (!pFuncCallback(&Entry, lpUserArgs))
+					return FALSE;
+			}
+			BaseRelocation = (DWORD)BaseRelocation + BaseRelocation->SizeOfBlock;
+		}
+	}
+	return TRUE;
+}
+
 BOOL PE32_EnumImports(HMODULE hMod, EnumImportsCallback pCallback, LPVOID UserArgs)
 {
 	IMPORT_ENTRY ImportEntry;

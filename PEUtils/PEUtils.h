@@ -13,6 +13,21 @@
 #define DUMP_FIELD(FieldName,Struct) \
 	printf("%s: %x\n",#FieldName,Struct->FieldName)
 
+/** 
+ * \brief each relocation in PE header is represented by this structure
+ * BaseRelocationBlock: pointer to associated IMAGE_BASE_RELOCATION header
+ * Type: type  of relocation (HIGHLOW, ...)
+ * Offset: Offset to page VA
+ * RelocationVA: Where the base relocation is to be applied
+ */
+typedef struct _RELOC_ENTRY
+{
+	PIMAGE_BASE_RELOCATION BaseRelocationBlock;
+	BYTE Type;
+	WORD Offset;
+	DWORD RelocationVA;
+}RELOC_ENTRY,*PRELOC_ENTRY;
+
 /**
  * \brief each sections found in PE Header is represented by this structure
  * SectionData points to section in memory
@@ -68,13 +83,18 @@ typedef struct _FILE_OFFSET_RVA
  */
 typedef BOOL(*EnumSectionsCallback)(PSECTION_ENTRY lpSectionEntry, LPVOID UserArgs);
 /**
- * Callback function type for PE32_EnumExportsCallback 
+ * Callback function type for PE32_EnumExports 
  */
 typedef BOOL(*EnumExportsCallback)(PEXPORT_ENTRY lpExportEntry, LPVOID UserArgs);
 /**
- * Callback function type for PE32_EnumImportsCallback
+ * Callback function type for PE32_EnumImports
  */
 typedef BOOL(*EnumImportsCallback)(PIMPORT_ENTRY lpImportEntry, LPVOID UserArgs);
+
+/**
+ * Callback function type for PE32_EnumRelocations
+ */
+typedef BOOL(*EnumRelocationsCallback)(PRELOC_ENTRY lpRelocEntry, LPVOID UserArgs);
 
 /**
  * \fn PIMAGE_NT_HEADERS32 PE32_GetNtHeaders(HMODULE hMod);
@@ -115,6 +135,16 @@ BOOL PE32_EnumImports(HMODULE hMod, EnumImportsCallback pFunCallback, LPVOID Use
 BOOL PE32_EnumSections(HMODULE hMod, EnumSectionsCallback pFuncCallback, LPVOID lpUserArgs);
 
 /**
+ * \fn PE32_EnumRelocations(HMODULE hMod, EnumRelocationsCallback pFuncCallback, LPVOID lpUserArgs);
+ * \brief enumerate relocations from a given module image base
+ * \param hMod: module image base
+ * \param pFuncCallback: callback function called for each relocations base
+ * \param UserArgs: [optional] extras arguments for callback function
+ * \return TRUE if all relocations have been enumerated
+ */
+BOOL PE32_EnumRelocations(HMODULE hMod, EnumRelocationsCallback pFuncCallback, LPVOID lpUserArgs);
+
+/**
  * \fn DWORD PE32_RVAToFileOffset(HMODULE hMod, DWORD dwRVA);
  * \brief convert a relative virtual address to a file offset
  * \param hMod: module image base
@@ -131,3 +161,5 @@ DWORD PE32_RVAToFileOffset(HMODULE hMod, DWORD dwRVA);
  * \return TRUE to continue to iterate over section
  */
 BOOL PE32_IsRVAPointToSection(PSECTION_ENTRY entry, LPVOID lpUserArgs);
+
+
