@@ -156,3 +156,27 @@ BOOL PE32_EnumImports(HMODULE hMod, EnumImportsCallback pCallback, LPVOID UserAr
 	return bEnumTerminated;
 }
 
+BOOL PE32_IsRVAPointToSection(PSECTION_ENTRY entry, LPVOID lpUserArgs)
+{
+	BOOL bContinue = TRUE;
+	PFILE_OFFSET_RVA frva = (PFILE_OFFSET_RVA)lpUserArgs;
+
+	if (frva->dwRVA >= entry->header->VirtualAddress && frva->dwRVA < entry->header->VirtualAddress + entry->header->Misc.VirtualSize)
+	{
+		frva->dwFileOffset = entry->header->PointerToRawData + (frva->dwRVA - entry->header->VirtualAddress);
+		bContinue = FALSE;
+	}
+
+	return bContinue;
+}
+
+
+DWORD PE32_RVAToFileOffset(HMODULE hMod, DWORD dwRVA)
+{
+	FILE_OFFSET_RVA FileOffsetRVA;
+	FileOffsetRVA.dwRVA = dwRVA;
+	FileOffsetRVA.dwFileOffset = 0;
+
+	PE32_EnumSections(hMod, PE32_IsRVAPointToSection, &FileOffsetRVA);
+	return FileOffsetRVA.dwFileOffset;
+}

@@ -51,6 +51,18 @@ typedef struct _IMPORT_ENTRY
 	PIMAGE_IMPORT_DESCRIPTOR pImportDesc;
 }IMPORT_ENTRY,*PIMPORT_ENTRY;
 
+
+/**
+ * \struct _FILE_OFFSET_RVA
+ * \brief Utility structure to convert a RVA to a file offset
+ * This structure is used internaly by PE32_RVAToFileOffset
+ */
+typedef struct _FILE_OFFSET_RVA
+{
+	DWORD dwRVA;
+	DWORD dwFileOffset;
+}FILE_OFFSET_RVA, *PFILE_OFFSET_RVA;
+
 /**
  * Callback function type for PE32_EnumSections
  */
@@ -101,3 +113,21 @@ BOOL PE32_EnumImports(HMODULE hMod, EnumImportsCallback pFunCallback, LPVOID Use
  * \return TRUE if all sections have been enumerated
  */
 BOOL PE32_EnumSections(HMODULE hMod, EnumSectionsCallback pFuncCallback, LPVOID lpUserArgs);
+
+/**
+ * \fn DWORD PE32_RVAToFileOffset(HMODULE hMod, DWORD dwRVA);
+ * \brief convert a relative virtual address to a file offset
+ * \param hMod: module image base
+ * \param dwRVA: relative virtual address from module image base
+ * \return module file offset
+ */
+DWORD PE32_RVAToFileOffset(HMODULE hMod, DWORD dwRVA);
+
+/**
+ * \fn BOOL PE32_IsRVAPointToSection(PSECTION_ENTRY entry, LPVOID lpUserArgs);
+ * \brief Callback for PE32_EnumSection to check if a relative virtual address is in a section
+ * \param entry section description (returned by PE32_EnumSection)
+ * \param lpUserArgs structure to store the file offset
+ * \return TRUE to continue to iterate over section
+ */
+BOOL PE32_IsRVAPointToSection(PSECTION_ENTRY entry, LPVOID lpUserArgs);
