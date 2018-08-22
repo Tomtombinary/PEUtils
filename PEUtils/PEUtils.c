@@ -160,10 +160,11 @@ BOOL PE32_IsRVAPointToSection(PSECTION_ENTRY entry, LPVOID lpUserArgs)
 {
 	BOOL bContinue = TRUE;
 	PFILE_OFFSET_RVA frva = (PFILE_OFFSET_RVA)lpUserArgs;
+	DWORD VirtualAddress = entry->header->VirtualAddress;
 
-	if (frva->dwRVA >= entry->header->VirtualAddress && frva->dwRVA < entry->header->VirtualAddress + entry->header->Misc.VirtualSize)
+	if (frva->dwRVA >= VirtualAddress && frva->dwRVA < VirtualAddress + entry->header->Misc.VirtualSize)
 	{
-		frva->dwFileOffset = entry->header->PointerToRawData + (frva->dwRVA - entry->header->VirtualAddress);
+		frva->dwFileOffset = entry->header->PointerToRawData + (frva->dwRVA - VirtualAddress);
 		bContinue = FALSE;
 	}
 
