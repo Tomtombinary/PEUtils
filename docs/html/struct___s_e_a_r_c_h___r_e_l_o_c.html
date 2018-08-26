@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PEUtils: _IMPORT_ENTRY Struct Reference</title>
+<title>PEUtils: _SEARCH_RELOC Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,25 +63,38 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="struct___i_m_p_o_r_t___e_n_t_r_y-members.html">List of all members</a>  </div>
+<a href="struct___s_e_a_r_c_h___r_e_l_o_c-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">_IMPORT_ENTRY Struct Reference</div>  </div>
+<div class="title">_SEARCH_RELOC Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Utility structure to search a relocation by RVA This structure is useful for PE32_SearchRelocation.  
+ <a href="struct___s_e_a_r_c_h___r_e_l_o_c.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_p_e_utils_8h_source.html">PEUtils.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a219d004675ee16acbfc0274eb23bfd66"><td class="memItemLeft" align="right" valign="top"><a id="a219d004675ee16acbfc0274eb23bfd66"></a>
-IMAGE_THUNK_DATA32&#160;</td><td class="memItemRight" valign="bottom"><b>Thunk</b></td></tr>
-<tr class="separator:a219d004675ee16acbfc0274eb23bfd66"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42517bf71f9160b5c47a35e0f5d288dc"><td class="memItemLeft" align="right" valign="top"><a id="a42517bf71f9160b5c47a35e0f5d288dc"></a>
-PIMAGE_IMPORT_BY_NAME&#160;</td><td class="memItemRight" valign="bottom"><b>pImportByName</b></td></tr>
-<tr class="separator:a42517bf71f9160b5c47a35e0f5d288dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3269f59ceb7fd46ec81d716ac736893b"><td class="memItemLeft" align="right" valign="top"><a id="a3269f59ceb7fd46ec81d716ac736893b"></a>
-PIMAGE_IMPORT_DESCRIPTOR&#160;</td><td class="memItemRight" valign="bottom"><b>pImportDesc</b></td></tr>
-<tr class="separator:a3269f59ceb7fd46ec81d716ac736893b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4c2a4e384aae5cf084b49469474c03b"><td class="memItemLeft" align="right" valign="top"><a id="af4c2a4e384aae5cf084b49469474c03b"></a>
+DWORD&#160;</td><td class="memItemRight" valign="bottom"><b>RVA</b></td></tr>
+<tr class="separator:af4c2a4e384aae5cf084b49469474c03b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31656b01791165d0377fec0a671866aa"><td class="memItemLeft" align="right" valign="top"><a id="a31656b01791165d0377fec0a671866aa"></a>
+BYTE&#160;</td><td class="memItemRight" valign="bottom"><b>Type</b></td></tr>
+<tr class="separator:a31656b01791165d0377fec0a671866aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc2c97aa45c3beec3b95d2bfd2a0e385"><td class="memItemLeft" align="right" valign="top"><a id="afc2c97aa45c3beec3b95d2bfd2a0e385"></a>
+WORD&#160;</td><td class="memItemRight" valign="bottom"><b>Offset</b></td></tr>
+<tr class="separator:afc2c97aa45c3beec3b95d2bfd2a0e385"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6d052f8de32f073b4888f3180bad581"><td class="memItemLeft" align="right" valign="top"><a id="ab6d052f8de32f073b4888f3180bad581"></a>
+DWORD&#160;</td><td class="memItemRight" valign="bottom"><b>RelocationVA</b></td></tr>
+<tr class="separator:ab6d052f8de32f073b4888f3180bad581"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10cde673635b7ad450d12c72ee63245d"><td class="memItemLeft" align="right" valign="top"><a id="a10cde673635b7ad450d12c72ee63245d"></a>
+IMAGE_BASE_RELOCATION&#160;</td><td class="memItemRight" valign="bottom"><b>BaseRelocationBlock</b></td></tr>
+<tr class="separator:a10cde673635b7ad450d12c72ee63245d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this struct was generated from the following file:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Utility structure to search a relocation by RVA This structure is useful for PE32_SearchRelocation. </p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="_p_e_utils_8h_source.html">PEUtils.h</a></li>
 </ul>
 </div><!-- contents -->

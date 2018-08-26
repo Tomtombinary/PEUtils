@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PEUtils: PEUtils/PEUtils.c File Reference</title>
+<title>PEUtils: PEUtils.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -59,10 +59,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_02c567a6eaeb812db7ff0c1ed5c86b04.html">PEUtils</a></li>  </ul>
-</div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
@@ -74,7 +70,7 @@ $(function() {
 
 <p>Defines function described in file <a class="el" href="_p_e_utils_8h.html" title="Utility functions to browse a PE in memory. ">PEUtils.h</a>.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="stdafx_8h_source.html">stdafx.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;stdafx.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="_p_e_utils_8h_source.html">PEUtils.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_mem_utils_8h_source.html">MemUtils.h</a>&quot;</code><br />
 </div><table class="memberdecls">
@@ -89,9 +85,24 @@ Functions</h2></td></tr>
 <tr class="memitem:a90e22f99a399afc0608616edde5666c6"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_p_e_utils_8c.html#a90e22f99a399afc0608616edde5666c6">PE32_EnumExports</a> (HMODULE hMod, <a class="el" href="_p_e_utils_8h.html#a186458d8ce041d138151d0ec7532d0fa">EnumExportsCallback</a> pCallback, LPVOID UserArgs)</td></tr>
 <tr class="memdesc:a90e22f99a399afc0608616edde5666c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">enumerate exports from a given module image base  <a href="#a90e22f99a399afc0608616edde5666c6">More...</a><br /></td></tr>
 <tr class="separator:a90e22f99a399afc0608616edde5666c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcf5450f34c9963db45b743eeeba3ce8"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_p_e_utils_8c.html#adcf5450f34c9963db45b743eeeba3ce8">PE32_EnumRelocations</a> (HMODULE hMod, <a class="el" href="_p_e_utils_8h.html#a5d808dcebf38a257c1583316f27e9f16">EnumRelocationsCallback</a> pFuncCallback, LPVOID lpUserArgs)</td></tr>
+<tr class="memdesc:adcf5450f34c9963db45b743eeeba3ce8"><td class="mdescLeft">&#160;</td><td class="mdescRight">enumerate relocations from a given module image base  <a href="#adcf5450f34c9963db45b743eeeba3ce8">More...</a><br /></td></tr>
+<tr class="separator:adcf5450f34c9963db45b743eeeba3ce8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a510601bcb0cc9048919a77a566e62ff2"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_p_e_utils_8c.html#a510601bcb0cc9048919a77a566e62ff2">PE32_EnumImports</a> (HMODULE hMod, <a class="el" href="_p_e_utils_8h.html#a9cdff5c5e86fad1599948d3a1b5d4d31">EnumImportsCallback</a> pCallback, LPVOID UserArgs)</td></tr>
 <tr class="memdesc:a510601bcb0cc9048919a77a566e62ff2"><td class="mdescLeft">&#160;</td><td class="mdescRight">enumerate exports from a given module image base  <a href="#a510601bcb0cc9048919a77a566e62ff2">More...</a><br /></td></tr>
 <tr class="separator:a510601bcb0cc9048919a77a566e62ff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cc0030127800e11819d372b44d6d159"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_p_e_utils_8c.html#a0cc0030127800e11819d372b44d6d159">PE32_IsRVAPointToSection</a> (<a class="el" href="struct___s_e_c_t_i_o_n___e_n_t_r_y.html">PSECTION_ENTRY</a> entry, LPVOID lpUserArgs)</td></tr>
+<tr class="memdesc:a0cc0030127800e11819d372b44d6d159"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback for PE32_EnumSection to check if a relative virtual address is in a section.  <a href="#a0cc0030127800e11819d372b44d6d159">More...</a><br /></td></tr>
+<tr class="separator:a0cc0030127800e11819d372b44d6d159"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d817bb3b49d2d9ae0f60ac900600641"><td class="memItemLeft" align="right" valign="top">DWORD&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_p_e_utils_8c.html#a8d817bb3b49d2d9ae0f60ac900600641">PE32_RVAToFileOffset</a> (HMODULE hMod, DWORD dwRVA)</td></tr>
+<tr class="memdesc:a8d817bb3b49d2d9ae0f60ac900600641"><td class="mdescLeft">&#160;</td><td class="mdescRight">convert a relative virtual address to a file offset  <a href="#a8d817bb3b49d2d9ae0f60ac900600641">More...</a><br /></td></tr>
+<tr class="separator:a8d817bb3b49d2d9ae0f60ac900600641"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89af275cf5e16ca0978de5dd7d29b8b5"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_p_e_utils_8c.html#a89af275cf5e16ca0978de5dd7d29b8b5">PE32_CallbackSearchRelocationByRVA</a> (<a class="el" href="struct___r_e_l_o_c___e_n_t_r_y.html">PRELOC_ENTRY</a> Reloc, <a class="el" href="struct___s_e_a_r_c_h___r_e_l_o_c.html">PRELOC_SEARCH</a> UserArgs)</td></tr>
+<tr class="memdesc:a89af275cf5e16ca0978de5dd7d29b8b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback for search a relocation entry by his RVA.  <a href="#a89af275cf5e16ca0978de5dd7d29b8b5">More...</a><br /></td></tr>
+<tr class="separator:a89af275cf5e16ca0978de5dd7d29b8b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa5f3a05286677b0a34b6347023686b9"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_p_e_utils_8c.html#aaa5f3a05286677b0a34b6347023686b9">PE32_SearchRelocation</a> (HMODULE hMod, <a class="el" href="struct___s_e_a_r_c_h___r_e_l_o_c.html">PRELOC_SEARCH</a> SearchArgs)</td></tr>
+<tr class="memdesc:aaa5f3a05286677b0a34b6347023686b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search a relocation by it's RVA.  <a href="#aaa5f3a05286677b0a34b6347023686b9">More...</a><br /></td></tr>
+<tr class="separator:aaa5f3a05286677b0a34b6347023686b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Defines function described in file <a class="el" href="_p_e_utils_8h.html" title="Utility functions to browse a PE in memory. ">PEUtils.h</a>. </p>
@@ -99,6 +110,43 @@ Functions</h2></td></tr>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>18 août 2018 </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="a89af275cf5e16ca0978de5dd7d29b8b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89af275cf5e16ca0978de5dd7d29b8b5">&#9670;&nbsp;</a></span>PE32_CallbackSearchRelocationByRVA()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL PE32_CallbackSearchRelocationByRVA </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct___r_e_l_o_c___e_n_t_r_y.html">PRELOC_ENTRY</a>&#160;</td>
+          <td class="paramname"><em>Reloc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct___s_e_a_r_c_h___r_e_l_o_c.html">PRELOC_SEARCH</a>&#160;</td>
+          <td class="paramname"><em>UserArgs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Callback for search a relocation entry by his RVA. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Reloc</td><td>relocation entry (from PE32_EnumRelocations) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>TRUE to continue to iterate over relocations table </dd></dl>
+
+</div>
+</div>
 <a id="a90e22f99a399afc0608616edde5666c6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a90e22f99a399afc0608616edde5666c6">&#9670;&nbsp;</a></span>PE32_EnumExports()</h2>
 
@@ -189,6 +237,51 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="adcf5450f34c9963db45b743eeeba3ce8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcf5450f34c9963db45b743eeeba3ce8">&#9670;&nbsp;</a></span>PE32_EnumRelocations()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PE32_EnumRelocations </td>
+          <td>(</td>
+          <td class="paramtype">HMODULE&#160;</td>
+          <td class="paramname"><em>hMod</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_p_e_utils_8h.html#a5d808dcebf38a257c1583316f27e9f16">EnumRelocationsCallback</a>&#160;</td>
+          <td class="paramname"><em>pFuncCallback</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPVOID&#160;</td>
+          <td class="paramname"><em>lpUserArgs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>enumerate relocations from a given module image base </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hMod</td><td>module image base </td></tr>
+    <tr><td class="paramname">pFuncCallback</td><td>callback function called for each relocations base </td></tr>
+    <tr><td class="paramname">UserArgs</td><td>[optional] extras arguments for callback function </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>TRUE if all relocations have been enumerated </dd></dl>
+
+</div>
+</div>
 <a id="ad271c48f128c6e5e395efababe44ec73"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad271c48f128c6e5e395efababe44ec73">&#9670;&nbsp;</a></span>PE32_EnumSections()</h2>
 
@@ -258,6 +351,124 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the PE Header address. NULL if PE Header has invalid signature or is not a 32 bits header </dd></dl>
+
+</div>
+</div>
+<a id="a0cc0030127800e11819d372b44d6d159"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cc0030127800e11819d372b44d6d159">&#9670;&nbsp;</a></span>PE32_IsRVAPointToSection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL PE32_IsRVAPointToSection </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct___s_e_c_t_i_o_n___e_n_t_r_y.html">PSECTION_ENTRY</a>&#160;</td>
+          <td class="paramname"><em>entry</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPVOID&#160;</td>
+          <td class="paramname"><em>lpUserArgs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Callback for PE32_EnumSection to check if a relative virtual address is in a section. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entry</td><td>section description (returned by PE32_EnumSection) </td></tr>
+    <tr><td class="paramname">lpUserArgs</td><td>structure to store the file offset </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>TRUE to continue to iterate over sections table </dd></dl>
+
+</div>
+</div>
+<a id="a8d817bb3b49d2d9ae0f60ac900600641"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d817bb3b49d2d9ae0f60ac900600641">&#9670;&nbsp;</a></span>PE32_RVAToFileOffset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DWORD PE32_RVAToFileOffset </td>
+          <td>(</td>
+          <td class="paramtype">HMODULE&#160;</td>
+          <td class="paramname"><em>hMod</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DWORD&#160;</td>
+          <td class="paramname"><em>dwRVA</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>convert a relative virtual address to a file offset </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hMod</td><td>module image base </td></tr>
+    <tr><td class="paramname">dwRVA</td><td>relative virtual address from module image base </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>module file offset </dd></dl>
+
+</div>
+</div>
+<a id="aaa5f3a05286677b0a34b6347023686b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa5f3a05286677b0a34b6347023686b9">&#9670;&nbsp;</a></span>PE32_SearchRelocation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL PE32_SearchRelocation </td>
+          <td>(</td>
+          <td class="paramtype">HMODULE&#160;</td>
+          <td class="paramname"><em>hMod</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct___s_e_a_r_c_h___r_e_l_o_c.html">PRELOC_SEARCH</a>&#160;</td>
+          <td class="paramname"><em>SearchArgs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Search a relocation by it's RVA. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hMod</td><td>module image base </td></tr>
+    <tr><td class="paramname">SearchArgs</td><td><ul>
+<li>[in] search argument (rva field must be initialized)</li>
+<li>[out] search result </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FALSE if relocation couldn't be found </dd></dl>
 
 </div>
 </div>

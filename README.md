@@ -5,6 +5,7 @@ PEUtils is a library written in C to browse a PE in memory. This library is call
 * enumerate sections
 * enumerate exports
 * enumerate imports
+* enumerate relocations
 * enumerate loaded modules
 
 #### how to use it ?

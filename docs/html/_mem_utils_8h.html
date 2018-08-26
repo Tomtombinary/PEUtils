@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PEUtils: PEUtils/MemUtils.h File Reference</title>
+<title>PEUtils: MemUtils.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -59,10 +59,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_02c567a6eaeb812db7ff0c1ed5c86b04.html">PEUtils</a></li>  </ul>
-</div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
@@ -75,7 +71,7 @@ $(function() {
 
 <p>Utility functions to walk through PEB.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="stdafx_8h_source.html">stdafx.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;stdafx.h&quot;</code><br />
 <code>#include &lt;winternl.h&gt;</code><br />
 </div>
 <p><a href="_mem_utils_8h_source.html">Go to the source code of this file.</a></p>
@@ -87,7 +83,8 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aea16b2dda5665a3df541f6624eb917df"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mem_utils_8h.html#aea16b2dda5665a3df541f6624eb917df">PEBUtils_EnumModules</a> (<a class="el" href="_mem_utils_8h.html#aeb1cdab355b872f96345f146fbd9c739">EnumModulesCallback</a> Callback, PVOID UserArgs)</td></tr>
+<tr class="memitem:aea16b2dda5665a3df541f6624eb917df"><td class="memItemLeft" align="right" valign="top"><a id="aea16b2dda5665a3df541f6624eb917df"></a>
+BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>PEBUtils_EnumModules</b> (<a class="el" href="_mem_utils_8h.html#aeb1cdab355b872f96345f146fbd9c739">EnumModulesCallback</a> Callback, PVOID UserArgs)</td></tr>
 <tr class="separator:aea16b2dda5665a3df541f6624eb917df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2262d456ed24b3ae78f57112656eab5d"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_mem_utils_8h.html#a2262d456ed24b3ae78f57112656eab5d">MemIsNull</a> (LPVOID Buffer, DWORD SizeInBytes)</td></tr>
 <tr class="memdesc:a2262d456ed24b3ae78f57112656eab5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a memory zone is null.  <a href="#a2262d456ed24b3ae78f57112656eab5d">More...</a><br /></td></tr>
@@ -150,34 +147,6 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>TRUE if memory is filled with zeros </dd></dl>
-
-</div>
-</div>
-<a id="aea16b2dda5665a3df541f6624eb917df"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aea16b2dda5665a3df541f6624eb917df">&#9670;&nbsp;</a></span>PEBUtils_EnumModules()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">BOOL PEBUtils_EnumModules </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="_mem_utils_8h.html#aeb1cdab355b872f96345f146fbd9c739">EnumModulesCallback</a>&#160;</td>
-          <td class="paramname"><em>Callback</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">PVOID&#160;</td>
-          <td class="paramname"><em>UserArgs</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
 
 </div>
 </div>

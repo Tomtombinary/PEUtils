@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PEUtils: PEUtils/MemUtils.h Source File</title>
+<title>PEUtils: MemUtils.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -45,6 +45,7 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,19 +60,12 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_02c567a6eaeb812db7ff0c1ed5c86b04.html">PEUtils</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">MemUtils.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="_mem_utils_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#pragma once</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="stdafx_8h.html">stdafx.h</a>&quot;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;winternl.h&gt;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="_mem_utils_8h.html#aeb1cdab355b872f96345f146fbd9c739">   17</a></span>&#160;<span class="keyword">typedef</span> BOOL(*<a class="code" href="_mem_utils_8h.html#aeb1cdab355b872f96345f146fbd9c739">EnumModulesCallback</a>)(PLDR_DATA_TABLE_ENTRY pLdrDataEntry,LPVOID UserArgs);</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;BOOL <a class="code" href="_mem_utils_8h.html#aea16b2dda5665a3df541f6624eb917df">PEBUtils_EnumModules</a>(<a class="code" href="_mem_utils_8h.html#aeb1cdab355b872f96345f146fbd9c739">EnumModulesCallback</a> Callback, PVOID UserArgs);</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;BOOL <a class="code" href="_mem_utils_8h.html#a2262d456ed24b3ae78f57112656eab5d">MemIsNull</a>(LPVOID Buffer, DWORD SizeInBytes);</div><div class="ttc" id="_mem_utils_8h_html_aea16b2dda5665a3df541f6624eb917df"><div class="ttname"><a href="_mem_utils_8h.html#aea16b2dda5665a3df541f6624eb917df">PEBUtils_EnumModules</a></div><div class="ttdeci">BOOL PEBUtils_EnumModules(EnumModulesCallback Callback, PVOID UserArgs)</div><div class="ttdef"><b>Definition:</b> MemUtils.c:23</div></div>
-<div class="ttc" id="_mem_utils_8h_html_a2262d456ed24b3ae78f57112656eab5d"><div class="ttname"><a href="_mem_utils_8h.html#a2262d456ed24b3ae78f57112656eab5d">MemIsNull</a></div><div class="ttdeci">BOOL MemIsNull(LPVOID Buffer, DWORD SizeInBytes)</div><div class="ttdoc">Check if a memory zone is null. </div><div class="ttdef"><b>Definition:</b> MemUtils.c:12</div></div>
-<div class="ttc" id="stdafx_8h_html"><div class="ttname"><a href="stdafx_8h.html">stdafx.h</a></div></div>
+<a href="_mem_utils_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#pragma once</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;stdafx.h&quot;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;winternl.h&gt;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="_mem_utils_8h.html#aeb1cdab355b872f96345f146fbd9c739">   17</a></span>&#160;<span class="keyword">typedef</span> BOOL(*<a class="code" href="_mem_utils_8h.html#aeb1cdab355b872f96345f146fbd9c739">EnumModulesCallback</a>)(PLDR_DATA_TABLE_ENTRY pLdrDataEntry,LPVOID UserArgs);</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;BOOL PEBUtils_EnumModules(<a class="code" href="_mem_utils_8h.html#aeb1cdab355b872f96345f146fbd9c739">EnumModulesCallback</a> Callback, PVOID UserArgs);</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;BOOL <a class="code" href="_mem_utils_8h.html#a2262d456ed24b3ae78f57112656eab5d">MemIsNull</a>(LPVOID Buffer, DWORD SizeInBytes);</div><div class="ttc" id="_mem_utils_8h_html_a2262d456ed24b3ae78f57112656eab5d"><div class="ttname"><a href="_mem_utils_8h.html#a2262d456ed24b3ae78f57112656eab5d">MemIsNull</a></div><div class="ttdeci">BOOL MemIsNull(LPVOID Buffer, DWORD SizeInBytes)</div><div class="ttdoc">Check if a memory zone is null. </div><div class="ttdef"><b>Definition:</b> MemUtils.c:12</div></div>
 <div class="ttc" id="_mem_utils_8h_html_aeb1cdab355b872f96345f146fbd9c739"><div class="ttname"><a href="_mem_utils_8h.html#aeb1cdab355b872f96345f146fbd9c739">EnumModulesCallback</a></div><div class="ttdeci">BOOL(* EnumModulesCallback)(PLDR_DATA_TABLE_ENTRY pLdrDataEntry, LPVOID UserArgs)</div><div class="ttdef"><b>Definition:</b> MemUtils.h:17</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

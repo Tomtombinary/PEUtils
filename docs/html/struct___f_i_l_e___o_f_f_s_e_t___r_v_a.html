@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PEUtils: Class Index</title>
+<title>PEUtils: _FILE_OFFSET_RVA Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -45,7 +45,6 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
-</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,24 +59,35 @@ $(function() {
 </iframe>
 </div>
 
+</div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="struct___f_i_l_e___o_f_f_s_e_t___r_v_a-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Class Index</div>  </div>
+<div class="title">_FILE_OFFSET_RVA Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="qindex"><a class="qindex" href="#letter__">_</a>&#160;|&#160;<a class="qindex" href="#letter_e">e</a>&#160;|&#160;<a class="qindex" href="#letter_i">i</a></div>
-<table class="classindex">
-<tr><td rowspan="2" valign="bottom"><a name="letter__"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;_&#160;&#160;</div></td></tr></table>
-</td><td valign="top"><a class="el" href="struct___f_i_l_e___o_f_f_s_e_t___r_v_a.html">_FILE_OFFSET_RVA</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="struct___s_e_a_r_c_h___r_e_l_o_c.html">_SEARCH_RELOC</a>&#160;&#160;&#160;</td><td rowspan="2" valign="bottom"><a name="letter_i"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;i&#160;&#160;</div></td></tr></table>
-</td><td></td></tr>
-<tr><td valign="top"><a class="el" href="struct___i_m_p_o_r_t___e_n_t_r_y.html">_IMPORT_ENTRY</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="struct___s_e_c_t_i_o_n___e_n_t_r_y.html">_SECTION_ENTRY</a>&#160;&#160;&#160;</td><td></td></tr>
-<tr><td valign="top"><a class="el" href="struct___e_x_p_o_r_t___e_n_t_r_y.html">_EXPORT_ENTRY</a>&#160;&#160;&#160;</td><td valign="top"><a class="el" href="struct___r_e_l_o_c___e_n_t_r_y.html">_RELOC_ENTRY</a>&#160;&#160;&#160;</td><td rowspan="2" valign="bottom"><a name="letter_e"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;e&#160;&#160;</div></td></tr></table>
-</td><td valign="top"><a class="el" href="struct_i_m_p_o_r_t___e_n_t_r_y.html">IMPORT_ENTRY</a>&#160;&#160;&#160;</td><td></td></tr>
-<tr><td></td><td></td><td></td><td></td></tr>
-<tr><td></td><td></td><td valign="top"><a class="el" href="struct_e_x_p_o_r_t___e_n_t_r_y.html">EXPORT_ENTRY</a>&#160;&#160;&#160;</td><td></td><td></td></tr>
-<tr><td></td><td></td><td></td><td></td><td></td></tr>
+
+<p>Utility structure to convert a RVA to a file offset This structure is used internaly by PE32_RVAToFileOffset.  
+ <a href="struct___f_i_l_e___o_f_f_s_e_t___r_v_a.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_p_e_utils_8h_source.html">PEUtils.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:adf0c6578fd334c377c5db34ff4318036"><td class="memItemLeft" align="right" valign="top"><a id="adf0c6578fd334c377c5db34ff4318036"></a>
+DWORD&#160;</td><td class="memItemRight" valign="bottom"><b>dwRVA</b></td></tr>
+<tr class="separator:adf0c6578fd334c377c5db34ff4318036"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4379d7b472f456f5f02a60a6ec664c61"><td class="memItemLeft" align="right" valign="top"><a id="a4379d7b472f456f5f02a60a6ec664c61"></a>
+DWORD&#160;</td><td class="memItemRight" valign="bottom"><b>dwFileOffset</b></td></tr>
+<tr class="separator:a4379d7b472f456f5f02a60a6ec664c61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<div class="qindex"><a class="qindex" href="#letter__">_</a>&#160;|&#160;<a class="qindex" href="#letter_e">e</a>&#160;|&#160;<a class="qindex" href="#letter_i">i</a></div>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Utility structure to convert a RVA to a file offset This structure is used internaly by PE32_RVAToFileOffset. </p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
+<li><a class="el" href="_p_e_utils_8h_source.html">PEUtils.h</a></li>
+</ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

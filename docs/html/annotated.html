@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PEUtils: Data Structures</title>
+<title>PEUtils: Class List</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,16 +62,19 @@ $(function() {
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Data Structures</div>  </div>
+<div class="title">Class List</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock">Here are the data structures with brief descriptions:</div><div class="directory">
+<div class="textblock">Here are the classes, structs, unions and interfaces with brief descriptions:</div><div class="directory">
 <table class="directory">
 <tr id="row_0_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="struct___e_x_p_o_r_t___e_n_t_r_y.html" target="_self">_EXPORT_ENTRY</a></td><td class="desc"></td></tr>
-<tr id="row_1_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="struct___i_m_p_o_r_t___e_n_t_r_y.html" target="_self">_IMPORT_ENTRY</a></td><td class="desc"></td></tr>
-<tr id="row_2_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="struct___s_e_c_t_i_o_n___e_n_t_r_y.html" target="_self">_SECTION_ENTRY</a></td><td class="desc">Each sections found in PE Header is represented by this structure SectionData points to section in memory SectionLimit points to the section end in memory </td></tr>
-<tr id="row_3_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="struct_e_x_p_o_r_t___e_n_t_r_y.html" target="_self">EXPORT_ENTRY</a></td><td class="desc">Each export found in export table is represented by this structure </td></tr>
-<tr id="row_4_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="struct_i_m_p_o_r_t___e_n_t_r_y.html" target="_self">IMPORT_ENTRY</a></td><td class="desc">Each import found in import table is represented by this structure Thunk conatains the address of imported function. pImportDesc describe the Dll associated with the import </td></tr>
+<tr id="row_1_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="struct___f_i_l_e___o_f_f_s_e_t___r_v_a.html" target="_self">_FILE_OFFSET_RVA</a></td><td class="desc">Utility structure to convert a RVA to a file offset This structure is used internaly by PE32_RVAToFileOffset </td></tr>
+<tr id="row_2_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="struct___i_m_p_o_r_t___e_n_t_r_y.html" target="_self">_IMPORT_ENTRY</a></td><td class="desc"></td></tr>
+<tr id="row_3_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="struct___r_e_l_o_c___e_n_t_r_y.html" target="_self">_RELOC_ENTRY</a></td><td class="desc">Each relocation in PE header is represented by this structure BaseRelocationBlock: pointer to associated IMAGE_BASE_RELOCATION header Type: type of relocation (HIGHLOW, ...) Offset: Offset to page VA RelocationVA: Where the base relocation is to be applied </td></tr>
+<tr id="row_4_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="struct___s_e_a_r_c_h___r_e_l_o_c.html" target="_self">_SEARCH_RELOC</a></td><td class="desc">Utility structure to search a relocation by RVA This structure is useful for PE32_SearchRelocation </td></tr>
+<tr id="row_5_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="struct___s_e_c_t_i_o_n___e_n_t_r_y.html" target="_self">_SECTION_ENTRY</a></td><td class="desc">Each sections found in PE Header is represented by this structure SectionData points to section in memory SectionLimit points to the section end in memory </td></tr>
+<tr id="row_6_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="struct_e_x_p_o_r_t___e_n_t_r_y.html" target="_self">EXPORT_ENTRY</a></td><td class="desc">Each export found in export table is represented by this structure </td></tr>
+<tr id="row_7_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="struct_i_m_p_o_r_t___e_n_t_r_y.html" target="_self">IMPORT_ENTRY</a></td><td class="desc">Each import found in import table is represented by this structure Thunk conatains the address of imported function. pImportDesc describe the Dll associated with the import </td></tr>
 </table>
 </div><!-- directory -->
 </div><!-- contents -->

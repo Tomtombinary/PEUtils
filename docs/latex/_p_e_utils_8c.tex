@@ -1,5 +1,5 @@
-\hypertarget{_p_e_utils_8c}{}\section{P\+E\+Utils/\+P\+E\+Utils.c File Reference}
-\label{_p_e_utils_8c}\index{P\+E\+Utils/\+P\+E\+Utils.\+c@{P\+E\+Utils/\+P\+E\+Utils.\+c}}
+\hypertarget{_p_e_utils_8c}{}\section{P\+E\+Utils.\+c File Reference}
+\label{_p_e_utils_8c}\index{P\+E\+Utils.\+c@{P\+E\+Utils.\+c}}
 
 
 Defines function described in file \mbox{\hyperlink{_p_e_utils_8h}{P\+E\+Utils.\+h}}.  
@@ -17,8 +17,18 @@ B\+O\+OL \mbox{\hyperlink{_p_e_utils_8c_ad271c48f128c6e5e395efababe44ec73}{P\+E3
 \begin{DoxyCompactList}\small\item\em enumerate sections from a given module image base \end{DoxyCompactList}\item 
 B\+O\+OL \mbox{\hyperlink{_p_e_utils_8c_a90e22f99a399afc0608616edde5666c6}{P\+E32\+\_\+\+Enum\+Exports}} (H\+M\+O\+D\+U\+LE h\+Mod, \mbox{\hyperlink{_p_e_utils_8h_a186458d8ce041d138151d0ec7532d0fa}{Enum\+Exports\+Callback}} p\+Callback, L\+P\+V\+O\+ID User\+Args)
 \begin{DoxyCompactList}\small\item\em enumerate exports from a given module image base \end{DoxyCompactList}\item 
+B\+O\+OL \mbox{\hyperlink{_p_e_utils_8c_adcf5450f34c9963db45b743eeeba3ce8}{P\+E32\+\_\+\+Enum\+Relocations}} (H\+M\+O\+D\+U\+LE h\+Mod, \mbox{\hyperlink{_p_e_utils_8h_a5d808dcebf38a257c1583316f27e9f16}{Enum\+Relocations\+Callback}} p\+Func\+Callback, L\+P\+V\+O\+ID lp\+User\+Args)
+\begin{DoxyCompactList}\small\item\em enumerate relocations from a given module image base \end{DoxyCompactList}\item 
 B\+O\+OL \mbox{\hyperlink{_p_e_utils_8c_a510601bcb0cc9048919a77a566e62ff2}{P\+E32\+\_\+\+Enum\+Imports}} (H\+M\+O\+D\+U\+LE h\+Mod, \mbox{\hyperlink{_p_e_utils_8h_a9cdff5c5e86fad1599948d3a1b5d4d31}{Enum\+Imports\+Callback}} p\+Callback, L\+P\+V\+O\+ID User\+Args)
-\begin{DoxyCompactList}\small\item\em enumerate exports from a given module image base \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em enumerate exports from a given module image base \end{DoxyCompactList}\item 
+B\+O\+OL \mbox{\hyperlink{_p_e_utils_8c_a0cc0030127800e11819d372b44d6d159}{P\+E32\+\_\+\+Is\+R\+V\+A\+Point\+To\+Section}} (\mbox{\hyperlink{struct___s_e_c_t_i_o_n___e_n_t_r_y}{P\+S\+E\+C\+T\+I\+O\+N\+\_\+\+E\+N\+T\+RY}} entry, L\+P\+V\+O\+ID lp\+User\+Args)
+\begin{DoxyCompactList}\small\item\em Callback for P\+E32\+\_\+\+Enum\+Section to check if a relative virtual address is in a section. \end{DoxyCompactList}\item 
+D\+W\+O\+RD \mbox{\hyperlink{_p_e_utils_8c_a8d817bb3b49d2d9ae0f60ac900600641}{P\+E32\+\_\+\+R\+V\+A\+To\+File\+Offset}} (H\+M\+O\+D\+U\+LE h\+Mod, D\+W\+O\+RD dw\+R\+VA)
+\begin{DoxyCompactList}\small\item\em convert a relative virtual address to a file offset \end{DoxyCompactList}\item 
+B\+O\+OL \mbox{\hyperlink{_p_e_utils_8c_a89af275cf5e16ca0978de5dd7d29b8b5}{P\+E32\+\_\+\+Callback\+Search\+Relocation\+By\+R\+VA}} (\mbox{\hyperlink{struct___r_e_l_o_c___e_n_t_r_y}{P\+R\+E\+L\+O\+C\+\_\+\+E\+N\+T\+RY}} Reloc, \mbox{\hyperlink{struct___s_e_a_r_c_h___r_e_l_o_c}{P\+R\+E\+L\+O\+C\+\_\+\+S\+E\+A\+R\+CH}} User\+Args)
+\begin{DoxyCompactList}\small\item\em Callback for search a relocation entry by his R\+VA. \end{DoxyCompactList}\item 
+B\+O\+OL \mbox{\hyperlink{_p_e_utils_8c_aaa5f3a05286677b0a34b6347023686b9}{P\+E32\+\_\+\+Search\+Relocation}} (H\+M\+O\+D\+U\+LE h\+Mod, \mbox{\hyperlink{struct___s_e_a_r_c_h___r_e_l_o_c}{P\+R\+E\+L\+O\+C\+\_\+\+S\+E\+A\+R\+CH}} Search\+Args)
+\begin{DoxyCompactList}\small\item\em Search a relocation by it\textquotesingle{}s R\+VA. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -36,6 +46,24 @@ Tomtombinary
 
 
 \subsection{Function Documentation}
+\mbox{\Hypertarget{_p_e_utils_8c_a89af275cf5e16ca0978de5dd7d29b8b5}\label{_p_e_utils_8c_a89af275cf5e16ca0978de5dd7d29b8b5}} 
+\index{P\+E\+Utils.\+c@{P\+E\+Utils.\+c}!P\+E32\+\_\+\+Callback\+Search\+Relocation\+By\+R\+VA@{P\+E32\+\_\+\+Callback\+Search\+Relocation\+By\+R\+VA}}
+\index{P\+E32\+\_\+\+Callback\+Search\+Relocation\+By\+R\+VA@{P\+E32\+\_\+\+Callback\+Search\+Relocation\+By\+R\+VA}!P\+E\+Utils.\+c@{P\+E\+Utils.\+c}}
+\subsubsection{\texorpdfstring{P\+E32\+\_\+\+Callback\+Search\+Relocation\+By\+R\+V\+A()}{PE32\_CallbackSearchRelocationByRVA()}}
+{\footnotesize\ttfamily B\+O\+OL P\+E32\+\_\+\+Callback\+Search\+Relocation\+By\+R\+VA (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct___r_e_l_o_c___e_n_t_r_y}{P\+R\+E\+L\+O\+C\+\_\+\+E\+N\+T\+RY}}}]{Reloc,  }\item[{\mbox{\hyperlink{struct___s_e_a_r_c_h___r_e_l_o_c}{P\+R\+E\+L\+O\+C\+\_\+\+S\+E\+A\+R\+CH}}}]{User\+Args }\end{DoxyParamCaption})}
+
+
+
+Callback for search a relocation entry by his R\+VA. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Reloc} & relocation entry (from P\+E32\+\_\+\+Enum\+Relocations) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE to continue to iterate over relocations table 
+\end{DoxyReturn}
 \mbox{\Hypertarget{_p_e_utils_8c_a90e22f99a399afc0608616edde5666c6}\label{_p_e_utils_8c_a90e22f99a399afc0608616edde5666c6}} 
 \index{P\+E\+Utils.\+c@{P\+E\+Utils.\+c}!P\+E32\+\_\+\+Enum\+Exports@{P\+E32\+\_\+\+Enum\+Exports}}
 \index{P\+E32\+\_\+\+Enum\+Exports@{P\+E32\+\_\+\+Enum\+Exports}!P\+E\+Utils.\+c@{P\+E\+Utils.\+c}}
@@ -80,6 +108,28 @@ enumerate exports from a given module image base
 \begin{DoxyReturn}{Returns}
 T\+R\+UE if all imports have been enumerated 
 \end{DoxyReturn}
+\mbox{\Hypertarget{_p_e_utils_8c_adcf5450f34c9963db45b743eeeba3ce8}\label{_p_e_utils_8c_adcf5450f34c9963db45b743eeeba3ce8}} 
+\index{P\+E\+Utils.\+c@{P\+E\+Utils.\+c}!P\+E32\+\_\+\+Enum\+Relocations@{P\+E32\+\_\+\+Enum\+Relocations}}
+\index{P\+E32\+\_\+\+Enum\+Relocations@{P\+E32\+\_\+\+Enum\+Relocations}!P\+E\+Utils.\+c@{P\+E\+Utils.\+c}}
+\subsubsection{\texorpdfstring{P\+E32\+\_\+\+Enum\+Relocations()}{PE32\_EnumRelocations()}}
+{\footnotesize\ttfamily P\+E32\+\_\+\+Enum\+Relocations (\begin{DoxyParamCaption}\item[{H\+M\+O\+D\+U\+LE}]{h\+Mod,  }\item[{\mbox{\hyperlink{_p_e_utils_8h_a5d808dcebf38a257c1583316f27e9f16}{Enum\+Relocations\+Callback}}}]{p\+Func\+Callback,  }\item[{L\+P\+V\+O\+ID}]{lp\+User\+Args }\end{DoxyParamCaption})}
+
+
+
+enumerate relocations from a given module image base 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h\+Mod} & module image base \\
+\hline
+{\em p\+Func\+Callback} & callback function called for each relocations base \\
+\hline
+{\em User\+Args} & \mbox{[}optional\mbox{]} extras arguments for callback function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE if all relocations have been enumerated 
+\end{DoxyReturn}
 \mbox{\Hypertarget{_p_e_utils_8c_ad271c48f128c6e5e395efababe44ec73}\label{_p_e_utils_8c_ad271c48f128c6e5e395efababe44ec73}} 
 \index{P\+E\+Utils.\+c@{P\+E\+Utils.\+c}!P\+E32\+\_\+\+Enum\+Sections@{P\+E32\+\_\+\+Enum\+Sections}}
 \index{P\+E32\+\_\+\+Enum\+Sections@{P\+E32\+\_\+\+Enum\+Sections}!P\+E\+Utils.\+c@{P\+E\+Utils.\+c}}
@@ -119,4 +169,68 @@ obtains address of PE Header in memory from a D\+OS Header
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 the PE Header address. N\+U\+LL if PE Header has invalid signature or is not a 32 bits header 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_p_e_utils_8c_a0cc0030127800e11819d372b44d6d159}\label{_p_e_utils_8c_a0cc0030127800e11819d372b44d6d159}} 
+\index{P\+E\+Utils.\+c@{P\+E\+Utils.\+c}!P\+E32\+\_\+\+Is\+R\+V\+A\+Point\+To\+Section@{P\+E32\+\_\+\+Is\+R\+V\+A\+Point\+To\+Section}}
+\index{P\+E32\+\_\+\+Is\+R\+V\+A\+Point\+To\+Section@{P\+E32\+\_\+\+Is\+R\+V\+A\+Point\+To\+Section}!P\+E\+Utils.\+c@{P\+E\+Utils.\+c}}
+\subsubsection{\texorpdfstring{P\+E32\+\_\+\+Is\+R\+V\+A\+Point\+To\+Section()}{PE32\_IsRVAPointToSection()}}
+{\footnotesize\ttfamily B\+O\+OL P\+E32\+\_\+\+Is\+R\+V\+A\+Point\+To\+Section (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct___s_e_c_t_i_o_n___e_n_t_r_y}{P\+S\+E\+C\+T\+I\+O\+N\+\_\+\+E\+N\+T\+RY}}}]{entry,  }\item[{L\+P\+V\+O\+ID}]{lp\+User\+Args }\end{DoxyParamCaption})}
+
+
+
+Callback for P\+E32\+\_\+\+Enum\+Section to check if a relative virtual address is in a section. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entry} & section description (returned by P\+E32\+\_\+\+Enum\+Section) \\
+\hline
+{\em lp\+User\+Args} & structure to store the file offset \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\+R\+UE to continue to iterate over sections table 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_p_e_utils_8c_a8d817bb3b49d2d9ae0f60ac900600641}\label{_p_e_utils_8c_a8d817bb3b49d2d9ae0f60ac900600641}} 
+\index{P\+E\+Utils.\+c@{P\+E\+Utils.\+c}!P\+E32\+\_\+\+R\+V\+A\+To\+File\+Offset@{P\+E32\+\_\+\+R\+V\+A\+To\+File\+Offset}}
+\index{P\+E32\+\_\+\+R\+V\+A\+To\+File\+Offset@{P\+E32\+\_\+\+R\+V\+A\+To\+File\+Offset}!P\+E\+Utils.\+c@{P\+E\+Utils.\+c}}
+\subsubsection{\texorpdfstring{P\+E32\+\_\+\+R\+V\+A\+To\+File\+Offset()}{PE32\_RVAToFileOffset()}}
+{\footnotesize\ttfamily D\+W\+O\+RD P\+E32\+\_\+\+R\+V\+A\+To\+File\+Offset (\begin{DoxyParamCaption}\item[{H\+M\+O\+D\+U\+LE}]{h\+Mod,  }\item[{D\+W\+O\+RD}]{dw\+R\+VA }\end{DoxyParamCaption})}
+
+
+
+convert a relative virtual address to a file offset 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h\+Mod} & module image base \\
+\hline
+{\em dw\+R\+VA} & relative virtual address from module image base \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+module file offset 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_p_e_utils_8c_aaa5f3a05286677b0a34b6347023686b9}\label{_p_e_utils_8c_aaa5f3a05286677b0a34b6347023686b9}} 
+\index{P\+E\+Utils.\+c@{P\+E\+Utils.\+c}!P\+E32\+\_\+\+Search\+Relocation@{P\+E32\+\_\+\+Search\+Relocation}}
+\index{P\+E32\+\_\+\+Search\+Relocation@{P\+E32\+\_\+\+Search\+Relocation}!P\+E\+Utils.\+c@{P\+E\+Utils.\+c}}
+\subsubsection{\texorpdfstring{P\+E32\+\_\+\+Search\+Relocation()}{PE32\_SearchRelocation()}}
+{\footnotesize\ttfamily B\+O\+OL P\+E32\+\_\+\+Search\+Relocation (\begin{DoxyParamCaption}\item[{H\+M\+O\+D\+U\+LE}]{h\+Mod,  }\item[{\mbox{\hyperlink{struct___s_e_a_r_c_h___r_e_l_o_c}{P\+R\+E\+L\+O\+C\+\_\+\+S\+E\+A\+R\+CH}}}]{Search\+Args }\end{DoxyParamCaption})}
+
+
+
+Search a relocation by it\textquotesingle{}s R\+VA. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h\+Mod} & module image base \\
+\hline
+{\em Search\+Args} & 
+\begin{DoxyItemize}
+\item \mbox{[}in\mbox{]} search argument (rva field must be initialized)
+\item \mbox{[}out\mbox{]} search result 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+A\+L\+SE if relocation couldn\textquotesingle{}t be found 
 \end{DoxyReturn}

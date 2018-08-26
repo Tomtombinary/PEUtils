@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PEUtils: _IMPORT_ENTRY Struct Reference</title>
+<title>PEUtils: _RELOC_ENTRY Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,25 +63,35 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="struct___i_m_p_o_r_t___e_n_t_r_y-members.html">List of all members</a>  </div>
+<a href="struct___r_e_l_o_c___e_n_t_r_y-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">_IMPORT_ENTRY Struct Reference</div>  </div>
+<div class="title">_RELOC_ENTRY Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>each relocation in PE header is represented by this structure BaseRelocationBlock: pointer to associated IMAGE_BASE_RELOCATION header Type: type of relocation (HIGHLOW, ...) Offset: Offset to page VA RelocationVA: Where the base relocation is to be applied  
+ <a href="struct___r_e_l_o_c___e_n_t_r_y.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_p_e_utils_8h_source.html">PEUtils.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a219d004675ee16acbfc0274eb23bfd66"><td class="memItemLeft" align="right" valign="top"><a id="a219d004675ee16acbfc0274eb23bfd66"></a>
-IMAGE_THUNK_DATA32&#160;</td><td class="memItemRight" valign="bottom"><b>Thunk</b></td></tr>
-<tr class="separator:a219d004675ee16acbfc0274eb23bfd66"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42517bf71f9160b5c47a35e0f5d288dc"><td class="memItemLeft" align="right" valign="top"><a id="a42517bf71f9160b5c47a35e0f5d288dc"></a>
-PIMAGE_IMPORT_BY_NAME&#160;</td><td class="memItemRight" valign="bottom"><b>pImportByName</b></td></tr>
-<tr class="separator:a42517bf71f9160b5c47a35e0f5d288dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3269f59ceb7fd46ec81d716ac736893b"><td class="memItemLeft" align="right" valign="top"><a id="a3269f59ceb7fd46ec81d716ac736893b"></a>
-PIMAGE_IMPORT_DESCRIPTOR&#160;</td><td class="memItemRight" valign="bottom"><b>pImportDesc</b></td></tr>
-<tr class="separator:a3269f59ceb7fd46ec81d716ac736893b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c1219b89b863768070727e24caf19ac"><td class="memItemLeft" align="right" valign="top"><a id="a0c1219b89b863768070727e24caf19ac"></a>
+PIMAGE_BASE_RELOCATION&#160;</td><td class="memItemRight" valign="bottom"><b>BaseRelocationBlock</b></td></tr>
+<tr class="separator:a0c1219b89b863768070727e24caf19ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf7e51dada85744bf30654d4ff27c42b"><td class="memItemLeft" align="right" valign="top"><a id="adf7e51dada85744bf30654d4ff27c42b"></a>
+BYTE&#160;</td><td class="memItemRight" valign="bottom"><b>Type</b></td></tr>
+<tr class="separator:adf7e51dada85744bf30654d4ff27c42b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9be68bcc7389b3ae221296afce89593"><td class="memItemLeft" align="right" valign="top"><a id="ad9be68bcc7389b3ae221296afce89593"></a>
+WORD&#160;</td><td class="memItemRight" valign="bottom"><b>Offset</b></td></tr>
+<tr class="separator:ad9be68bcc7389b3ae221296afce89593"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21325d69c9d011ab4074e70f0651eb9a"><td class="memItemLeft" align="right" valign="top"><a id="a21325d69c9d011ab4074e70f0651eb9a"></a>
+DWORD&#160;</td><td class="memItemRight" valign="bottom"><b>RelocationVA</b></td></tr>
+<tr class="separator:a21325d69c9d011ab4074e70f0651eb9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this struct was generated from the following file:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>each relocation in PE header is represented by this structure BaseRelocationBlock: pointer to associated IMAGE_BASE_RELOCATION header Type: type of relocation (HIGHLOW, ...) Offset: Offset to page VA RelocationVA: Where the base relocation is to be applied </p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="_p_e_utils_8h_source.html">PEUtils.h</a></li>
 </ul>
 </div><!-- contents -->
