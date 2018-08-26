@@ -212,3 +212,23 @@ DWORD PE32_RVAToFileOffset(HMODULE hMod, DWORD dwRVA)
 	PE32_EnumSections(hMod, PE32_IsRVAPointToSection, &FileOffsetRVA);
 	return FileOffsetRVA.dwFileOffset;
 }
+
+BOOL PE32_CallbackSearchRelocationByRVA(PRELOC_ENTRY Reloc,PRELOC_SEARCH UserArgs)
+{
+	BOOL bContinue = TRUE;
+	if (Reloc->BaseRelocationBlock->VirtualAddress + Reloc->Offset == UserArgs->RVA)
+	{
+		UserArgs->Type = Reloc->Type;
+		UserArgs->Offset = Reloc->Offset;
+		UserArgs->RelocationVA = Reloc->RelocationVA;
+		UserArgs->BaseRelocationBlock.SizeOfBlock = Reloc->BaseRelocationBlock->SizeOfBlock;
+		UserArgs->BaseRelocationBlock.VirtualAddress = Reloc->BaseRelocationBlock->VirtualAddress;
+		bContinue = FALSE;
+	}
+	return bContinue;
+}
+
+BOOL PE32_SearchRelocation(HMODULE hMod, PRELOC_SEARCH SearchArgs)
+{
+	return !PE32_EnumRelocations(hMod, PE32_CallbackSearchRelocationByRVA,SearchArgs);
+}

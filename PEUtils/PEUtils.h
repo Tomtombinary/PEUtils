@@ -78,6 +78,21 @@ typedef struct _FILE_OFFSET_RVA
 	DWORD dwFileOffset;
 }FILE_OFFSET_RVA, *PFILE_OFFSET_RVA;
 
+
+/**
+ * \struct _SEARCH_RELOC
+ * \brief Utility structure to search a relocation by RVA
+ * This structure is useful for PE32_SearchRelocation
+ */
+typedef struct _SEARCH_RELOC
+{
+	DWORD RVA;
+	BYTE Type;
+	WORD Offset;
+	DWORD RelocationVA;
+	IMAGE_BASE_RELOCATION BaseRelocationBlock;
+}RELOC_SEARCH,*PRELOC_SEARCH;
+
 /**
  * Callback function type for PE32_EnumSections
  */
@@ -158,8 +173,26 @@ DWORD PE32_RVAToFileOffset(HMODULE hMod, DWORD dwRVA);
  * \brief Callback for PE32_EnumSection to check if a relative virtual address is in a section
  * \param entry section description (returned by PE32_EnumSection)
  * \param lpUserArgs structure to store the file offset
- * \return TRUE to continue to iterate over section
+ * \return TRUE to continue to iterate over sections table
  */
 BOOL PE32_IsRVAPointToSection(PSECTION_ENTRY entry, LPVOID lpUserArgs);
 
 
+/**
+ * \fn BOOL PE32_CallbackSearchRelocationByRVA(PRELOC_ENTRY Reloc, PRELOC_SEARCH UserArgs);
+ * \brief Callback for search a relocation entry by his RVA
+ * \param Reloc relocation entry (from PE32_EnumRelocations)
+ * \return TRUE to continue to iterate over relocations table
+ */
+BOOL PE32_CallbackSearchRelocationByRVA(PRELOC_ENTRY Reloc, PRELOC_SEARCH UserArgs);
+
+/** 
+ * \fn BOOL PE32_SearchRelocation(HMODULE hMod, PRELOC_SEARCH SearchArgs);
+ * \brief Search a relocation by it's RVA
+ * \param hMod module image base
+ * \param SearchArgs 
+ *   - [in] search argument (rva field must be initialized)
+ *   - [out] search result
+ * \return FALSE if relocation couldn't be found
+ */
+BOOL PE32_SearchRelocation(HMODULE hMod, PRELOC_SEARCH SearchArgs);
