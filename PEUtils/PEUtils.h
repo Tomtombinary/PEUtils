@@ -47,7 +47,7 @@ typedef struct _SECTION_ENTRY
 typedef struct _EXPORT_ENTRY
 {
 	WORD Ordinal;
-	DWORD RVAAddress;
+	DWORD RVAFunction;
 	DWORD RVAName;
 	LPCSTR Name;
 	PVOID pFunction;

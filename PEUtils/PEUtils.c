@@ -82,11 +82,12 @@ BOOL PE32_EnumExports(HMODULE hMod, EnumExportsCallback pCallback, LPVOID UserAr
 		lpAddressOfNames = (PDWORD)((DWORD)hMod + lpImageExportDirectory->AddressOfNames);
 		lpAddressOfNamesOrdinals = (PWORD)((DWORD)hMod + lpImageExportDirectory->AddressOfNameOrdinals);
 
+		
 		for (unsigned int i = 0; i < lpImageExportDirectory->NumberOfNames; i++)
 		{
 			entry.Ordinal = lpAddressOfNamesOrdinals[i];
 			entry.RVAName = lpAddressOfNames[i];
-			entry.RVAAddress = lpAddressOfFunctions[entry.Ordinal];
+			entry.RVAFunction = lpAddressOfFunctions[entry.Ordinal];
 			entry.Name =  (LPCSTR)((DWORD)hMod + lpAddressOfNames[i]);
 			entry.pFunction = (PVOID)((DWORD)hMod + lpAddressOfFunctions[entry.Ordinal]);
 
@@ -113,7 +114,7 @@ BOOL PE32_EnumRelocations(HMODULE hMod, EnumRelocationsCallback pFuncCallback, L
 	DWORD BaseRelocDescriptorRVA = lpNtHeader->OptionalHeader.DataDirectory[IMAGE_DIRECTORY_ENTRY_BASERELOC].VirtualAddress;
 	if(BaseRelocDescriptorRVA != 0)
 	{	
-		BaseRelocation = (DWORD)hMod + BaseRelocDescriptorRVA;
+		BaseRelocation = (PIMAGE_BASE_RELOCATION)((DWORD)hMod + BaseRelocDescriptorRVA);
 		while(!MemIsNull(BaseRelocation, sizeof(IMAGE_BASE_RELOCATION)))
 		{ 
 			Items = (PWORD)((DWORD)BaseRelocation + sizeof(IMAGE_BASE_RELOCATION));
@@ -127,7 +128,7 @@ BOOL PE32_EnumRelocations(HMODULE hMod, EnumRelocationsCallback pFuncCallback, L
 				if (!pFuncCallback(&Entry, lpUserArgs))
 					return FALSE;
 			}
-			BaseRelocation = (DWORD)BaseRelocation + BaseRelocation->SizeOfBlock;
+			BaseRelocation = (PIMAGE_BASE_RELOCATION)((DWORD)BaseRelocation + BaseRelocation->SizeOfBlock);
 		}
 	}
 	return TRUE;
